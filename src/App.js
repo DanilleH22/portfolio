@@ -7,6 +7,7 @@ import Technologies from './pages/Technologies';
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css' 
 import ContactMe from './pages/ContactMe';
+import Experience from './pages/Experience';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <AboutMe />
         <Technologies />
         <Projects />
+        <Experience />
         <ContactMe />
       </Container>
     </div>
