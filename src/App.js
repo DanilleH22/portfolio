@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Technologies from './pages/Technologies';
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css' 
+import ContactMe from './pages/ContactMe';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <AboutMe />
         <Technologies />
         <Projects />
-
+        <ContactMe />
       </Container>
     </div>
   );
