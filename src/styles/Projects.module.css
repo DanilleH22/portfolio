@@ -1,0 +1,10 @@
+.projectTechnology {
+    display: inline-block;
+    padding-left: 1.5rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.projectLink {
+    padding-left: 10rem;
+}
