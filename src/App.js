@@ -11,16 +11,16 @@ import Experience from './pages/Experience';
 
 function App() {
   return (
+    <Container fluid="md">
     <div className="App">
       <NavBar /> 
-      <Container>
         <AboutMe />
         <Technologies />
         <Projects />
         <Experience />
         <ContactMe />
-      </Container>
     </div>
+    </Container>
   );
 }
 
