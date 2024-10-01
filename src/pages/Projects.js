@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import styles from "../styles/Projects.module.css"
+import styles from "../styles/Projects.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -13,28 +13,29 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 const Projects = () => {
   return (
     <Container fluid>
-      <section id="projects">
-        {/* Project Layout with Image and Card Side by Side */}
+      <section className={styles.projects}>
         <Row className={styles.projectRow}>
-          <Col md={6}>
-            <Image src={proj1} fluid rounded alt="EcoLifeHub" />
+          {/* Image Column */}
+          <Col className={styles.Images}>
+            <Image src={proj1} className={styles.imageSpecific} rounded alt="EcoLifeHub" />
           </Col>
-          <Col md={6} className={styles.projectBody}>
+          {/* Card Column */}
+          <Col className={styles.projectBody}>
             <Card className={styles.projectCard}>
               <Card.Body>
-                <Card.Title className='project-title'>EcoLifeHub</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted project-subtitle">Front-end Developer</Card.Subtitle>
-                <Card.Text className='project-text'>
+                <Card.Title style={{ textAlign: 'left' }}>EcoLifeHub</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted" style={{ textAlign: 'left' }}>Front-end Developer</Card.Subtitle>
+                <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </Card.Text>
                 <Card.Text className={styles.projectTechnology} id={styles.projectTechnology1}>HTML</Card.Text>
                 <Card.Text className={styles.projectTechnology}>CSS</Card.Text>
+
                 <br />
-                
+
                 {/* GitHub Link */}
-                <Card.Link 
-                  href="https://github.com/DanilleH22/EcoLifeHub" className={styles.projectLink} target="_blank" aria-label="GitHub Link">
-                  <FontAwesomeIcon icon={faGithub}/>
+                <Card.Link href="https://github.com/DanilleH22/EcoLifeHub" className={styles.projectLink} target="_blank" aria-label="GitHub Link">
+                  <FontAwesomeIcon icon={faGithub} />
                 </Card.Link>
 
                 {/* Live Project Link */}
