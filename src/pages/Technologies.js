@@ -15,20 +15,20 @@ function Technologies() {
   return (
     <Container>
       {/* Parent Row for all sections */}
-      <Row>
+      <Row className='pt-5'>
 
         {/* Technologies Column */}
         <Col md={4}>
           <h4 className="justify-content-md-center">Technologies</h4>
           <Row>
             <Col xs={3} md={4}>
-              <Image src={html} width={50} height={50} rounded alt="HTML" />
+              <Image src={html} width={40} height={40} rounded alt="HTML" />
             </Col>
             <Col xs={3} md={4}>
-              <Image src={python} width={50} height={50} rounded alt="Python" />
+              <Image src={python} width={40} height={40} rounded alt="Python" />
             </Col>
             <Col xs={3} md={4}>
-              <Image src={js} width={50} height={50} rounded alt="JavaScript" />
+              <Image src={js} width={40} height={40} rounded alt="JavaScript" />
             </Col>
           </Row>
         </Col>
@@ -38,13 +38,13 @@ function Technologies() {
           <h4 className="justify-content-md-center">Frameworks and Libraries</h4>
           <Row>
             <Col xs={3} md={4}>
-              <Image src={react} width={50} height={50} rounded alt="React" />
+              <Image src={react} width={40} height={40} rounded alt="React" />
             </Col>
             <Col xs={3} md={4}>
-              <Image src={dj} width={50} height={50} rounded alt="Django" />
+              <Image src={dj} width={40} height={40} rounded alt="Django" />
             </Col>
             <Col xs={3} md={4}>
-              <Image src={node} width={100} height={50} rounded alt="Node.js" />
+              <Image src={node} width={40} height={40} rounded alt="Node.js" />
             </Col>
           </Row>
         </Col>
@@ -54,10 +54,10 @@ function Technologies() {
           <h4 className="justify-content-md-center">Databases</h4>
           <Row className="justify-content-md-center">
             <Col xs={3} md={4}>
-              <Image src={postgresql} width={50} height={50} rounded alt="PostgreSQL" />
+              <Image src={postgresql} width={40} height={40} rounded alt="PostgreSQL" />
             </Col>
             <Col xs={3} md={4}>
-              <Image src={sql} width={100} height={50} rounded alt="MySQL" />
+              <Image src={sql} width={40} height={40} rounded alt="MySQL" />
             </Col>
           </Row>
         </Col>
