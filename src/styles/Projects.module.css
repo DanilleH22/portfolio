@@ -1,13 +1,12 @@
 .projectLink {
     display: inline-block;
-    margin-right: 1rem; 
-    left: 9rem;
-    font-size: 1.5rem; 
-    color: blue; 
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: blue;
     text-decoration: none;
-    position: relative; 
-    top: -1rem;
-    padding-top: 1rem;
+    position: relative;
+    padding-top: 0.5rem;
+    
 }
 
 .projectLink:hover {
@@ -19,19 +18,20 @@
     padding-left: 1.5rem;
     font-style: italic;
     text-decoration: underline;
-
 }
 
 #projectTechnology1 {
-    padding-left: 15rem;
+    padding-left: 1.5rem;
 }
-
 
 .projectCard {
     padding: 20px;
     position: relative;
-    overflow: hidden;
-    max-width: 100%;
+    z-index: 2;
+    width: 35vw; 
+    height: auto; 
+    top: 3rem; 
+    left: -5rem; 
 }
 
 .projectBody {
@@ -39,3 +39,26 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.projects {
+    min-height: 100vh; 
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;  
+    position: relative; 
+}
+
+.Images {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.imageSpecific {
+    max-width: 100%; 
+    height: 400px;
+    object-fit: cover;
+  }
+  
