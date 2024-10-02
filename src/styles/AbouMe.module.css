@@ -6,7 +6,10 @@
   .MyDescription {
     font-size: 16px;
     line-height: 1.6;
-    padding-left: 10px;
+    padding-left: 10px !important;
+    display: flex;
+  justify-content: space-around; 
+  align-items: center;
   }
   
   /* Responsive Adjustments */
@@ -16,14 +19,19 @@
     }
     
     .MyDescription {
-      font-size: 14px;
-      text-align: center; 
+      font-size: 10px;
+      
+    }
+
+    p {
+      width: 70% !important;
     }
   
     /* Image Styling for Smaller Screens */
     img {
-      width: 100%; 
-      height: auto; 
+      width: 50%; 
+      height: 60%; 
+      justify-content: center;
     }
   }
   

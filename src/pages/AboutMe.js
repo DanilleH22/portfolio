@@ -18,7 +18,7 @@ const AboutMe = () => {
           </p>
         </Col>
         {/* Right Column: Image */}
-        <Col className='d-flex justify-content-center' lg={6} xs={12}>
+        <Col className='d-flex justify-content-center pe-5' lg={6} xs={12}>
           <Image 
             src={headshot} 
             width={315} 
