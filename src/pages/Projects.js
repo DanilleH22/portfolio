@@ -22,25 +22,25 @@ const Projects = () => {
           {/* Card Column */}
           <Col className={styles.projectBody}>
             <Card className={styles.projectCard}>
-              <Card.Body>
-                <Card.Title style={{ textAlign: 'left' }}>EcoLifeHub</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted" style={{ textAlign: 'left' }}>Front-end Developer</Card.Subtitle>
-                <Card.Text>
+              <Card.Body className={styles.projectCardBody}>
+                <Card.Title style={{ textAlign: 'left', background: 'transparent', color: 'white' }}>EcoLifeHub</Card.Title>
+                <Card.Subtitle className="mb-2" style={{ textAlign: 'left', background: 'transparent', color: 'white' }}>Front-end Developer</Card.Subtitle>
+                <Card.Text style={{ background: 'transparent'}}>
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </Card.Text>
-                <Card.Text className={styles.projectTechnology} id={styles.projectTechnology1}>HTML</Card.Text>
-                <Card.Text className={styles.projectTechnology}>CSS</Card.Text>
+                <Card.Text className={styles.projectTechnology} id={styles.projectTechnology1} style={{ background: 'transparent'}}>HTML</Card.Text>
+                <Card.Text className={styles.projectTechnology} style={{ background: 'transparent'}}>CSS</Card.Text>
 
                 <br />
 
                 {/* GitHub Link */}
-                <Card.Link href="https://github.com/DanilleH22/EcoLifeHub" className={styles.projectLink} target="_blank" aria-label="GitHub Link">
-                  <FontAwesomeIcon icon={faGithub} />
+                <Card.Link href="https://github.com/DanilleH22/EcoLifeHub" className={styles.projectLink} target="_blank" aria-label="GitHub Link" style={{ background: 'transparent'}}>
+                  <FontAwesomeIcon icon={faGithub} style={{ background: 'transparent'}} />
                 </Card.Link>
 
                 {/* Live Project Link */}
-                <Card.Link href="https://danilleh22.github.io/EcoLifeHub/" className={styles.projectLink} target="_blank" aria-label="Live Link">
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                <Card.Link href="https://danilleh22.github.io/EcoLifeHub/" className={styles.projectLink} target="_blank" aria-label="Live Link" style={{ background: 'transparent'}}>
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{ background: 'transparent'}}/>
                 </Card.Link>
               </Card.Body>
             </Card>
