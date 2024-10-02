@@ -1,0 +1,29 @@
+.MyDescriptionOuter {
+    padding: 20px;
+  }
+  
+  /* Description Text */
+  .MyDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .MyDescriptionOuter {
+      padding: 10px;
+    }
+    
+    .MyDescription {
+      font-size: 14px;
+      text-align: center; 
+    }
+  
+    /* Image Styling for Smaller Screens */
+    img {
+      width: 100%; 
+      height: auto; 
+    }
+  }
+  
