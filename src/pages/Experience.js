@@ -53,40 +53,49 @@ function Experience() {
 
         const [activeIndex, setActiveIndex] = useState(null);
 
-  return (
-    <Container className='p-5'>
-      <Tab.Container  defaultActiveKey="0">
-        <Row className="mt-3" style={{ height: '35vh'}}>
-          <Col sm={4} className='d-flex justify-content-end' style={{ fontSize: '12px' }}>
-            <Nav className={styles.Job}>
-              {data.map((item, index) => (
-                <Nav.Item key={index} className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
-                onClick={() => setActiveIndex(index)}>
-                  <Nav.Link eventKey={index.toString()} className='text-start' style={{ color: '#B8C6D9' }}>{item.job}</Nav.Link>
-                </Nav.Item>
-              ))}
-            </Nav>
-          </Col>
-          <Col sm={8}>
-            <Tab.Content style={{ width: '80%' }}>
-              {data.map((item, index) => (
-                <Tab.Pane eventKey={index.toString()} key={index} >
-                  <h5 className='d-flex justify-content-start ps-4'><strong>{item.role}</strong></h5>
-                  <p className='d-flex justify-content-start ps-4'>{item.date}</p>
-                  <ul style={{ listStyleType: 'circle', textAlign: 'left', color: '#B8C6D9' }}> 
-                    {item.description.map((point, i) => (
-                      <li key={i}>{point}</li>
+        return (
+          <Container className='p-5'>
+            <Tab.Container defaultActiveKey="0">
+              <Row className="mt-3">
+                {/* Left Column with Job List */}
+                <Col lg={4} xs={12} className={styles.OuterJob}>
+                  <Nav className={styles.Job}>
+                    {data.map((item, index) => (
+                      <Nav.Item
+                        key={index}
+                        className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
+                        onClick={() => setActiveIndex(index)}
+                      >
+                        <Nav.Link eventKey={index.toString()} className='text-start' style={{ color: '#B8C6D9' }}>
+                          {item.job}
+                        </Nav.Link>
+                      </Nav.Item>
                     ))}
-                  </ul>
-                  
-                </Tab.Pane>
-              ))}
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
-    </Container>
-  );
-}
+                  </Nav>
+                </Col>
+      
+                {/* Right Column with Job Details */}
+                <Col lg={8} xs={12} className={styles.Description}>
+                  <Tab.Content style={{ width: '100%' }}>
+                    {data.map((item, index) => (
+                      <Tab.Pane eventKey={index.toString()} key={index}>
+                        <h5 className='d-flex justify-content-start ps-4'>
+                          <strong>{item.role}</strong>
+                        </h5>
+                        <p className='d-flex justify-content-start ps-4'>{item.date}</p>
+                        <ul style={{ listStyleType: 'circle', textAlign: 'left', color: '#B8C6D9' }}>
+                          {item.description.map((point, i) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      </Tab.Pane>
+                    ))}
+                  </Tab.Content>
+                </Col>
+              </Row>
+            </Tab.Container>
+          </Container>
+        );
+      }
 
 export default Experience;
