@@ -50,11 +50,11 @@ function Experience() {
         ]
 
   return (
-    <Container>
+    <Container className='p-5'>
       <Tab.Container  defaultActiveKey="0">
-        <Row className="justify-content-md-center mt-3">
+        <Row className="mt-3">
           <Col sm={4}>
-            <Nav variant="pills" className="flex-column">
+            <Nav variant="outline-secondary" className="flex-column flex-row-reverse">
               {data.map((item, index) => (
                 <Nav.Item key={index}>
                   <Nav.Link eventKey={index.toString()}>{item.job}</Nav.Link>
@@ -63,11 +63,11 @@ function Experience() {
             </Nav>
           </Col>
           <Col sm={8}>
-            <Tab.Content>
+            <Tab.Content style={{ width: '80%' }}>
               {data.map((item, index) => (
                 <Tab.Pane eventKey={index.toString()} key={index} >
-                  <h5>{item.role}</h5>
-                  <p>{item.date}</p>
+                  <h5 className='d-flex justify-content-start ps-4'>{item.role}</h5>
+                  <p className='d-flex justify-content-start ps-4'>{item.date}</p>
                   <ul style={{ listStyleType: 'circle', textAlign: 'left' }}> 
                     {item.description.map((point, i) => (
                       <li key={i}>{point}</li>
