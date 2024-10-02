@@ -33,7 +33,7 @@ export default function ContactMe() {
 
       <Row className="d-flex justify-content-center mb-3">
         {/* LinkedIn Button */}
-        <Col xs={12} md={4} className="mb-2 d-flex justify-content-center">
+        <Col xs={4} md={4} className="mb-2 d-flex justify-content-center">
           <Button
             href="https://www.linkedin.com/in/danille-hamilton-971b29206"
             target="_blank"
@@ -45,7 +45,7 @@ export default function ContactMe() {
         </Col>
 
         {/* Email Button */}
-        <Col xs={12} md={4} className="mb-2 d-flex justify-content-center">
+        <Col xs={4} md={4} className="mb-2 d-flex justify-content-center">
           <Button
             variant="outline-secondary"
             disabled={isLoading}
@@ -58,7 +58,7 @@ export default function ContactMe() {
         </Col>
 
         {/* Resume Download Button */}
-        <Col xs={12} md={4} className="mb-2 d-flex justify-content-center">
+        <Col xs={4} md={4} className="mb-2 d-flex justify-content-center">
           <Button
             href={danilleCv}
             download="danilleCv"
