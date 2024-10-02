@@ -1,9 +1,6 @@
-/* .Nav.Item {
-    color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
-} */
-
 .JobName {
- border-left: 2px solid red;
+ border-left: 2px solid rgb(57, 52, 52);
+ margin-bottom: 10px;
  
 }
 
