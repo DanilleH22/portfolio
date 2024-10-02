@@ -24,43 +24,53 @@ export default function ContactMe() {
   const handleClick = () => setLoading(true);
 
   return (
-    <Container>
-    <Row className='pt-3 mb-3' >
-      
+    <Container fluid>
+      <Row className="pt-3 mb-3 text-center">
         <h1>Contact Me</h1>
         <p>I am always open to collaborating with people! Feel free to check me out on LinkedIn or Email.</p>
-        <br/>
         <p>If you are a recruiter or employer, feel free to download my resume or email me!</p>
-        <Col className='d-flex justify-content-end'>
-          <div>
-            <Button
-              href="https://www.linkedin.com/in/danille-hamilton-971b29206"
-              target="_blank"
-              variant="outline-secondary"
-            >
-              LinkedIn
-            </Button>
-          </div>
+      </Row>
+
+      <Row className="d-flex justify-content-center mb-3">
+        {/* LinkedIn Button */}
+        <Col xs={12} md={4} className="mb-2 d-flex justify-content-center">
+          <Button
+            href="https://www.linkedin.com/in/danille-hamilton-971b29206"
+            target="_blank"
+            variant="outline-secondary"
+            className="w-100"
+          >
+            LinkedIn
+          </Button>
         </Col>
-        <Col className='d-flex justify-content-center'>
-          <div>
-            <Button
-              variant="outline-secondary"
-              disabled={isLoading}
-              onClick={!isLoading ? handleClick : null}
-              href="mailto:hamiltonkdanille@hotmail.com"
-            >
-              {isLoading ? 'Loading…' : 'Email me'}
-            </Button>
-          </div>
+
+        {/* Email Button */}
+        <Col xs={12} md={4} className="mb-2 d-flex justify-content-center">
+          <Button
+            variant="outline-secondary"
+            disabled={isLoading}
+            onClick={!isLoading ? handleClick : null}
+            href="mailto:hamiltonkdanille@hotmail.com"
+            className="w-100"
+          >
+            {isLoading ? 'Loading…' : 'Email me'}
+          </Button>
         </Col>
-        <Col className='d-flex justify-content-start'>
-        <Button href={danilleCv} download="danilleCv" target='_blank' rel="noreferrer" variant="outline-secondary">
-        Resume</Button>
-      </Col>
-    
-    
-    </Row>
+
+        {/* Resume Download Button */}
+        <Col xs={12} md={4} className="mb-2 d-flex justify-content-center">
+          <Button
+            href={danilleCv}
+            download="danilleCv"
+            target="_blank"
+            rel="noreferrer"
+            variant="outline-secondary"
+            className="w-100"
+          >
+            Resume
+          </Button>
+        </Col>
+      </Row>
     </Container>
   );
 }
