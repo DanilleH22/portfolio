@@ -56,7 +56,7 @@ function Experience() {
   return (
     <Container className='p-5'>
       <Tab.Container  defaultActiveKey="0">
-        <Row className="mt-3">
+        <Row className="mt-3" style={{ height: '35vh'}}>
           <Col sm={4} className='d-flex justify-content-end' style={{ fontSize: '12px' }}>
             <Nav className={styles.Job}>
               {data.map((item, index) => (
