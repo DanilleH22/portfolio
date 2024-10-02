@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from 'react';
 import danilleCv from '../assets/files/danilleCv.pdf'
+import { Container } from 'react-bootstrap';
 
 export default function ContactMe() {
   const [isLoading, setLoading] = useState(false);
@@ -23,7 +24,8 @@ export default function ContactMe() {
   const handleClick = () => setLoading(true);
 
   return (
-    <Row className='pt-3' >
+    <Container>
+    <Row className='pt-3 mb-3' >
       
         <h1>Contact Me</h1>
         <p>I am always open to collaborating with people! Feel free to check me out on LinkedIn or Email.</p>
@@ -40,7 +42,7 @@ export default function ContactMe() {
             </Button>
           </div>
         </Col>
-        <Col className='d-flex justify-content-start'>
+        <Col className='d-flex justify-content-center'>
           <div>
             <Button
               variant="outline-secondary"
@@ -53,10 +55,12 @@ export default function ContactMe() {
           </div>
         </Col>
         <Col className='d-flex justify-content-start'>
-        <Button href={danilleCv} download="danilleCv" target='_blank' rel="noreferrer">
+        <Button href={danilleCv} download="danilleCv" target='_blank' rel="noreferrer" variant="outline-secondary">
         Resume</Button>
       </Col>
     
+    
     </Row>
+    </Container>
   );
 }
