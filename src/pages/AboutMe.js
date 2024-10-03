@@ -5,7 +5,7 @@ import styles from '../styles/AbouMe.module.css';
 
 const AboutMe = () => {
   return (
-    <Container>
+    <Container style={{ width: '75%'}}>
       <Row className={styles.MyDescriptionOuter}> 
         {/* Left Column: Text */}
         <Col className={styles.MyDescription} lg={6} xs={12} >
