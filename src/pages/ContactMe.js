@@ -24,8 +24,8 @@ export default function ContactMe() {
   const handleClick = () => setLoading(true);
 
   return (
-    <Container fluid>
-      <Row className="pt-3 mb-3 text-center">
+    <Container fluid style={{ width: '75%'}}>
+      <Row className="pt-3 mb-3 mt-3 text-center">
         <h1>Contact Me</h1>
         <p>I am always open to collaborating with people! Feel free to check me out on LinkedIn or Email.</p>
         <p>If you are a recruiter or employer, feel free to download my resume or email me!</p>

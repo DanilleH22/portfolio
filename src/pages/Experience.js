@@ -54,7 +54,7 @@ function Experience() {
         const [activeIndex, setActiveIndex] = useState(null);
 
         return (
-          <Container className='p-5'>
+          <Container fluid style={{ width: '75%'}}>
             <Tab.Container defaultActiveKey="0">
               <Row className="mt-3">
                 {/* Left Column with Job List */}
