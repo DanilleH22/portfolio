@@ -12,7 +12,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Projects = () => {
   return (
-    <Container fluid>
+    <Container fluid style={{ width: '90%'}}>
       <section className={styles.projects}>
         <Row className={styles.projectRow}>
           {/* Image Column */}
