@@ -32,12 +32,18 @@
     height: auto; 
     top: 3rem; 
     left: -5rem; 
+    background-color: #031240 !important;
+    border-radius: 1rem !important;
 }
 
 .projectBody {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;   
+}
+
+.projectCardBody {
+    background-color: #04328C !important;
 }
 
 .projects {
@@ -57,7 +63,7 @@
 }
 
 .imageSpecific {
-    max-width: 100%; 
+    max-width: 130%; 
     height: 400px;
     object-fit: cover;
   }
