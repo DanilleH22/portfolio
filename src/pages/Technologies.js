@@ -1,65 +1,58 @@
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
+import styles from '../styles/Technologies.module.css';
 import Row from 'react-bootstrap/Row';
-import dj from '../assets/dj.png';
-import python from '../assets/Postgresql.png';
-import js from '../assets/js.webp';
-import react from '../assets/react.png';
-import postgresql from '../assets/Postgresql.png';
-import node from '../assets/noode.jpg';
-import html from '../assets/html.png';
-import sql from '../assets/sql.png';
 
 function Technologies() {
   return (
-    <Container>
-      {/* Parent Row for all sections */}
-      <Row className='pt-5'>
-
-        {/* Technologies Column */}
-        <Col md={4}>
-          <h4 className="justify-content-md-center">Technologies</h4>
-          <Row>
-            <Col xs={3} md={4}>
-              <Image src={html} width={40} height={40} rounded alt="HTML" />
-            </Col>
-            <Col xs={3} md={4}>
-              <Image src={python} width={40} height={40} rounded alt="Python" />
-            </Col>
-            <Col xs={3} md={4}>
-              <Image src={js} width={40} height={40} rounded alt="JavaScript" />
-            </Col>
-          </Row>
+    <Container style={{ width: '75%'}} >
+      <Row className='text-center' >
+        <h4>Technologies & Tools</h4>
+        <p>Throughout my journey as a software developer, I have worked with a diverse range of technologies, frameworks, and tools. Below are some of the key ones that I regularly use in my projects:</p>
+        <Col md={3} className={styles.TechnologiesListCol}>
+        <h6> Languages:</h6>
+        <div className='d-flex justify-content-start'>
+        <ul className={styles.TechnologiesList}>
+          <li>
+            HTML
+          </li>
+          <li>CSS</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+        </ul>
+        </div>
         </Col>
-
-        {/* Frameworks and Libraries Column */}
-        <Col md={4}>
-          <h4 className="justify-content-md-center">Frameworks and Libraries</h4>
-          <Row>
-            <Col xs={3} md={4}>
-              <Image src={react} width={40} height={40} rounded alt="React" />
-            </Col>
-            <Col xs={3} md={4}>
-              <Image src={dj} width={40} height={40} rounded alt="Django" />
-            </Col>
-            <Col xs={3} md={4}>
-              <Image src={node} width={40} height={40} rounded alt="Node.js" />
-            </Col>
-          </Row>
+        <Col md={3} className={styles.TechnologiesListCol}>
+        <h6>Frameworks & Libraries</h6>
+        <div className='d-flex justify-content-start'>
+        <ul className={styles.TechnologiesList}>
+          <li>React</li>
+          <li>Bootstrap</li>
+          <li>Django</li>
+          <li>Flask</li>
+          <li>Node.js</li>
+        </ul>
+        </div>
         </Col>
-
-        {/* Databases Column */}
-        <Col md={4}>
-          <h4 className="justify-content-md-center">Databases</h4>
-          <Row className="justify-content-md-center">
-            <Col xs={3} md={4}>
-              <Image src={postgresql} width={40} height={40} rounded alt="PostgreSQL" />
-            </Col>
-            <Col xs={3} md={4}>
-              <Image src={sql} width={40} height={40} rounded alt="MySQL" />
-            </Col>
-          </Row>
+        <Col md={3} className={styles.TechnologiesListCol}>
+        <h6>APIs & Tools</h6>
+        <div className='d-flex justify-content-start'>
+        <ul className={styles.TechnologiesList}>
+          <li>Git</li>
+          <li>RESTful APIs</li>
+        </ul>
+        </div>
+        </Col>
+        <Col md={3} className={styles.TechnologiesListCol}>
+          <h6>Development Environments</h6>
+          <div className='d-flex justify-content-start'>
+          <ul className={styles.TechnologiesList}>
+            <li>GitHub</li>
+            <li>Xcode</li>
+            <li>Visual Studio</li>
+          </ul>
+          </div>
         </Col>
 
       </Row>
