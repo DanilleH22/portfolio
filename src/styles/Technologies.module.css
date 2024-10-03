@@ -1,0 +1,8 @@
+.TechnologiesList {
+    list-style:square;
+    list-style-position: inside;
+}
+
+.TechnologiesListCol {
+    text-align: start;
+}
