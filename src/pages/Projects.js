@@ -16,11 +16,11 @@ const Projects = () => {
       <section className={styles.projects}>
         <Row className={styles.projectRow}>
           {/* Image Column */}
-          <Col className={styles.Images}>
+          <Col md={6} className={styles.Images}>
             <Image src={proj1} className={styles.imageSpecific} rounded alt="EcoLifeHub" />
           </Col>
           {/* Card Column */}
-          <Col className={styles.projectBody}>
+          <Col md={4} className={styles.projectBody}>
             <Card className={styles.projectCard}>
               <Card.Body className={styles.projectCardBody}>
                 <Card.Title style={{ textAlign: 'left', background: 'transparent', color: 'white' }}>EcoLifeHub</Card.Title>
