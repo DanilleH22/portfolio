@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectBack = ({ projectDescription, projectLinks, projectTechnologies, projectRole, handleClick }) => {
   return (
-    <div className="project-back">
+    <div onClick={handleClick}>
       <p>{projectDescription}</p>
       <p>{projectRole}</p>
       <p>{projectTechnologies}</p>
@@ -19,9 +19,6 @@ const ProjectBack = ({ projectDescription, projectLinks, projectTechnologies, pr
           </a>
         ))}
       </div>
-      <button onClick={handleClick} className="flip-button">
-        Back to Front
-      </button>
     </div>
   );
 };
