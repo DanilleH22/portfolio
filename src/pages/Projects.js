@@ -7,6 +7,7 @@ import Proj2 from '../assets/proj2.png';
 import Proj3 from '../assets/proj3.png';
 import Proj4 from '../assets/proj4.png';
 import Proj5 from '../assets/proj5.png';
+import styles from '../styles/Projects.module.css';
 
 const Projects = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);
@@ -74,36 +75,38 @@ const Projects = () => {
   ];
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+    <div className={styles.projectContainer}>
       {projects.map((project, index) => (
-        <ReactCardFlip
-          key={index}
-          isFlipped={flippedIndex === index}
-          flipDirection="horizontal"
-        >
-          {/* Front */}
-          <div>
-            <ProjectFront
-              projectName={project.name}
-              projectImage={project.image}
-              handleClick={() => handleClick(index)}
-            />
-          </div>
-
-          {/* Back */}
-          <div>
-            <ProjectBack
-              projectDescription={project.description}
-              projectTechnologies={project.technologies}
-              projectLinks={project.links}
-              projectRole={project.role}
-              handleClick={() => handleClick(index)}
-            />
-          </div>
-        </ReactCardFlip>
+        <div className={styles.projectCard} key={index}>
+          <ReactCardFlip
+            isFlipped={flippedIndex === index}
+            flipDirection="horizontal"
+          >
+            {/* Front */}
+            <div>
+              <ProjectFront
+                projectName={project.name}
+                projectImage={project.image}
+                handleClick={() => handleClick(index)}
+              />
+            </div>
+  
+            {/* Back */}
+            <div>
+              <ProjectBack
+                projectDescription={project.description}
+                projectTechnologies={project.technologies}
+                projectLinks={project.links}
+                projectRole={project.role}
+                handleClick={() => handleClick(index)}
+              />
+            </div>
+          </ReactCardFlip>
+        </div>
       ))}
     </div>
   );
+  
 };
 
 export default Projects;
