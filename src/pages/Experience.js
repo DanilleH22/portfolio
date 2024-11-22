@@ -56,6 +56,7 @@ function Experience() {
         return (
           <Container fluid style={{ width: '75%'}}>
             <Tab.Container defaultActiveKey="0">
+              <div className={styles.JobBox}>
               <Row className="mt-3">
                 {/* Left Column with Job List */}
                 <Col lg={4} xs={12} className={styles.OuterJob}>
@@ -93,6 +94,7 @@ function Experience() {
                   </Tab.Content>
                 </Col>
               </Row>
+              </div>
             </Tab.Container>
           </Container>
         );
