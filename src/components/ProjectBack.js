@@ -6,14 +6,14 @@ const ProjectBack = ({ projectDescription, projectLinks, projectTechnologies, pr
       <p>{projectDescription}</p>
       <p>{projectRole}</p>
       <p>{projectTechnologies}</p>
-      <div className="project-links">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>
         {projectLinks.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-link"
+            style={{ color: '#007BFF', textDecoration: 'none', fontSize: '14px' }}
           >
             {link.label}
           </a>
