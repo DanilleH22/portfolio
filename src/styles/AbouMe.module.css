@@ -1,45 +1,53 @@
 .MyDescriptionOuter {
-    padding: 20px;
+  padding: 20px;
+}
+
+/* Description Text */
+.MyDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 10px !important;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px;
+}
+
+img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .MyDescriptionOuter {
+    padding: 10px;
   }
-  
-  /* Description Text */
+
   .MyDescription {
-    font-size: 16px;
-    line-height: 1.6;
-    padding-left: 10px !important;
-    display: flex;
-  justify-content: space-around; 
-  align-items: center;
+    font-size: 14px; 
+    flex-direction: column; 
+    text-align: center; 
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .MyDescriptionOuter {
-      padding: 10px;
-    }
-    
-    .MyDescription {
-      font-size: 10px;
-      
-    }
 
-    p {
-      width: 70% !important;
-    }
-  
-    /* Image Styling for Smaller Screens */
-    img {
-      width: 50%; 
-      height: 60%; 
-      justify-content: center;
-    }
+  img {
+    width: 70%;
+    height: 70%;
   }
-  
+}
 
-  .AboutMeCard {
-    padding: 20px;
-    position: relative;
-    border-radius: 20px;
-    box-shadow: -10px 10px 10px rgba(209, 205, 205, 0.1); 
-    margin-bottom: 30px;
+@media (max-width:1190px) {
+  img {
+    width: 85%;
+    height: 80%;
+  }
+}
+
+/* About Me Card Styling */
+.AboutMeCard {
+  padding: 20px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px rgba(209, 205, 205, 0.1); 
+  margin-bottom: 30px;
 }
