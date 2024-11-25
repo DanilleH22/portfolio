@@ -6,6 +6,7 @@ import styles from '../styles/AbouMe.module.css';
 const AboutMe = () => {
   return (
     <Container style={{ width: '75%'}}>
+      <div className={styles.AboutMeCard}>
       <Row className={styles.MyDescriptionOuter}> 
         {/* Left Column: Text */}
         <Col className={styles.MyDescription} lg={6} xs={12} >
@@ -28,6 +29,7 @@ const AboutMe = () => {
           />
         </Col>
       </Row>
+      </div>
     </Container>
   )
 }

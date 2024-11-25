@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 function Technologies() {
   return (
     <Container style={{ width: '75%'}} >
+      <div className={styles.TechBox}>
       <Row className='text-center' >
         <h4>Technologies & Tools</h4>
         <p xs={8} className='d-flex justify-content-center'>Throughout my journey as a software developer, I have worked with a diverse range of technologies, frameworks, and tools. Below are some of the key ones that I regularly use in my projects:</p>
@@ -56,6 +57,7 @@ function Technologies() {
         </Col>
 
       </Row>
+      </div>
     </Container>
   );
 }
