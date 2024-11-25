@@ -1,7 +1,7 @@
-/* Job Name Styling */
+Job Name Styling
 .JobName {
   border-left: 2px solid rgb(57, 52, 52);
-  margin-bottom: 10px;
+  margin-bottom: 5px 0;
   padding-left: 10px;
   transition: background-color 0.3s ease;
   font-size: 16px;
@@ -25,56 +25,77 @@
 .Job {
   display: flex;
   flex-direction: column;
-  
   width: 100%;
+  height: 350px;
+  justify-content: space-evenly;
+  
 }
 
+.TabContent {
+  margin-top: 10px;
+  text-align: left;
+  color: #B8C6D9;
+}
+
+/* Left Column - Job List */
 .OuterJob {
+  width: 40%; 
   display: flex;
-  justify-content: start !important;
   flex-direction: column;
-  align-items: end;
-  
+  justify-content: flex-start; 
+  gap: 10px; 
+  height: 350px;
 }
 
-/* Responsive Adjustments */
-@media (min-width: 768px) {
-  .Job {
-    flex-direction: row; 
-    width: 65%; 
-    /* justify-content: left !important; */
-  }
-
-  .OuterJob {
-    width: 40%;
-    flex-direction: column;
-  }
-  
-}
-
+/* Right Column - Job Description */
 .Description {
+  width: 60%; 
   padding: 20px;
   font-size: 16px;
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+}
+
+
+
+
+/* Parent Row Styling */
+.JobBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(209, 205, 205, 0.1); 
+  gap: 20px; 
+  height: 400px;
 }
 
 /* For smaller screens */
 @media (max-width: 768px) {
   .JobName {
-    padding-left: 5px;
+    padding-left: 2px 0;
     margin-bottom: 5px;
     font-size: 12px;
   }
 
-  .Description {
+  /* .Description {
     font-size: 12px;
     width: 100%;
+  } */
+
+  .JobBox {
+    flex-direction: column; 
+  }
+
+  .OuterJob, .Description {
+    width: 100%; 
   }
 }
 
-.JobBox {
-  padding: 30px;
-  position: relative;
-  border-radius: 20px;
-  box-shadow: 10px 10px 5px rgba(209, 205, 205, 0.1); 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  
 }
