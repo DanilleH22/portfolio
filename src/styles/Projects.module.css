@@ -23,3 +23,11 @@
     margin-bottom: 10px; 
     object-fit: cover;
 }
+
+.BackCard, .FrontCard{
+    height: 275px;
+    display: grid;
+  align-items: center;
+  justify-content: center;
+
+}
