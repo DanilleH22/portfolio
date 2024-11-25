@@ -8,6 +8,7 @@ import Proj3 from '../assets/proj3.png';
 import Proj4 from '../assets/proj4.png';
 import Proj5 from '../assets/proj5.png';
 import styles from '../styles/Projects.module.css';
+import { motion } from "motion/react"
 
 const Projects = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);
@@ -77,7 +78,9 @@ const Projects = () => {
   return (
     <div className={styles.projectContainer}>
       {projects.map((project, index) => (
-        <div className={styles.projectCard} key={index}>
+        <motion.div  whileHover={{ scale: 1.2 }}
+        onHoverStart={event => {}}
+        onHoverEnd={event => {}} className={styles.projectCard} key={index} layoutId="modal">
           <ReactCardFlip
             isFlipped={flippedIndex === index}
             flipDirection="horizontal"
@@ -102,7 +105,7 @@ const Projects = () => {
               />
             </div>
           </ReactCardFlip>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
