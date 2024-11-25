@@ -6,3 +6,10 @@
 .TechnologiesListCol {
     text-align: start;
 }
+.TechBox {
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(209, 205, 205, 0.1); 
+  }
