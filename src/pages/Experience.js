@@ -54,19 +54,20 @@ function Experience() {
         const [activeIndex, setActiveIndex] = useState(null);
 
         return (
-          <Container fluid style={{ width: '75%'}}>
+          <Container fluid style={{ maxWidth: '1000px' }}>
             <Tab.Container defaultActiveKey="0">
               <div className={styles.JobBox}>
-              <Row className="mt-3">
+              <Row className="mt-3 align-items-start">
                 {/* Left Column with Job List */}
                 <Col lg={4} xs={12} className={styles.OuterJob}>
                   <Nav className={styles.Job}>
                     {data.map((item, index) => (
                       <Nav.Item
-                        key={index}
-                        className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
-                        onClick={() => setActiveIndex(index)}
-                      >
+                      key={index}
+                      className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
+                      style={{ marginBottom: '5px' }} 
+                      onClick={() => setActiveIndex(index)}
+                    >                    
                         <Nav.Link eventKey={index.toString()} className='text-start' style={{ color: '#B8C6D9' }}>
                           {item.job}
                         </Nav.Link>
