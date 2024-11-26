@@ -8,7 +8,7 @@ import Proj3 from '../assets/proj3.png';
 import Proj4 from '../assets/proj4.png';
 import Proj5 from '../assets/proj5.png';
 import styles from '../styles/Projects.module.css';
-import { motion } from "motion/react"
+import { motion } from "framer-motion";
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Projects = () => {
@@ -79,9 +79,9 @@ const Projects = () => {
   return (
     <ScrollAnimation className={styles.projectContainer}>
       {projects.map((project, index) => (
-        <motion.div  whileHover={{ scale: 1.2 }}
+        <motion.div whileHover={{ scale: 1.2 }}
         onHoverStart={event => {}}
-        onHoverEnd={event => {}} className={styles.projectCard} key={index} layoutId="modal">
+        onHoverEnd={event => {}} className={styles.projectCard} key={index} >
           <ReactCardFlip
             isFlipped={flippedIndex === index}
             flipDirection="horizontal"
