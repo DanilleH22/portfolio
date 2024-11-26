@@ -3,4 +3,22 @@
     color:  #e4edf9;
 }
 
+.Name {
+    flex: display;
+    justify-content: start;
+}
+
+.Resume {
+    flex: display;
+    justify-content: end;
+}
+
+.Resume button {
+    border: none;
+  }
+  
+.Resume button:hover {
+    box-shadow: 0 12px 16px 0 rgba(209, 205, 205, 0.1), 0 17px 50px 0 rgba(209, 205, 205, 0.1);
+  }
+
 /* #b8bfc9 */
