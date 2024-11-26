@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import danilleCv from '../assets/files/danilleCv.pdf'
 import { Container } from 'react-bootstrap';
 import styles from '../styles/ContactMe.module.css'
+import ScrollAnimation from '../components/ScrollAnimation';
 
 export default function ContactMe() {
   const [isLoading, setLoading] = useState(false);
@@ -26,7 +27,7 @@ export default function ContactMe() {
 
   return (
     <Container fluid style={{ width: '75%'}}>
-      <div className={styles.ContactMeCard}>
+      <ScrollAnimation className={styles.ContactMeCard}>
       <Row className="pt-3 mb-3 mt-3 text-center">
         <h1>Contact Me</h1>
         <p>I am always open to collaborating with people! Feel free to check me out on LinkedIn or Email.</p>
@@ -73,7 +74,7 @@ export default function ContactMe() {
           </Button>
         </Col>
       </Row>
-      </div>
+      </ScrollAnimation>
     </Container>
   );
 }

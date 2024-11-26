@@ -9,6 +9,7 @@ import Proj4 from '../assets/proj4.png';
 import Proj5 from '../assets/proj5.png';
 import styles from '../styles/Projects.module.css';
 import { motion } from "motion/react"
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const Projects = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);
@@ -76,7 +77,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className={styles.projectContainer}>
+    <ScrollAnimation className={styles.projectContainer}>
       {projects.map((project, index) => (
         <motion.div  whileHover={{ scale: 1.2 }}
         onHoverStart={event => {}}
@@ -107,7 +108,7 @@ const Projects = () => {
           </ReactCardFlip>
         </motion.div>
       ))}
-    </div>
+    </ScrollAnimation>
   );
   
 };

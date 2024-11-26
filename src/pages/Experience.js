@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import styles from "../styles/Experience.module.css";
 import { useState } from 'react';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 function Experience() {
 
@@ -55,6 +56,10 @@ function Experience() {
 
         return (
           <Container fluid style={{ maxWidth: '1000px' }}>
+            <ScrollAnimation animationVariants={{
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } }
+  }}>
             <Tab.Container defaultActiveKey="0">
               <div className={styles.JobBox}>
               <Row className="mt-3 align-items-start">
@@ -97,6 +102,7 @@ function Experience() {
               </Row>
               </div>
             </Tab.Container>
+            </ScrollAnimation>
           </Container>
         );
       }

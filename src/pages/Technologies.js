@@ -2,11 +2,15 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import styles from '../styles/Technologies.module.css';
 import Row from 'react-bootstrap/Row';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 function Technologies() {
   return (
     <Container style={{ width: '75%'}} >
-      <div className={styles.TechBox}>
+      <ScrollAnimation className={styles.TechBox} animationVariants={{
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } }
+  }}>
       <Row className='text-center' >
         <h4>Technologies & Tools</h4>
         <p xs={8} className='d-flex justify-content-center'>Throughout my journey as a software developer, I have worked with a diverse range of technologies, frameworks, and tools. Below are some of the key ones that I regularly use in my projects:</p>
@@ -57,7 +61,7 @@ function Technologies() {
         </Col>
 
       </Row>
-      </div>
+      </ScrollAnimation>
     </Container>
   );
 }
