@@ -99,3 +99,9 @@ Job Name Styling
 @media (max-width: 768px) {
   
 }
+
+/* Job title */
+.JobHeader {
+  position: absolute;
+  right: 40%;
+}
