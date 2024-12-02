@@ -8,16 +8,20 @@ import Proj3 from '../assets/proj3.png';
 import Proj4 from '../assets/proj4.png';
 import Proj5 from '../assets/proj5.png';
 import styles from '../styles/Projects.module.css';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Projects = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null); // Modal state
 
   const handleClick = (index) => {
     setFlippedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const openModal = (project) => setSelectedProject(project);
+  const closeModal = () => setSelectedProject(null);
+  
   const projects = [
     {
       name: 'Eco Life Hub',
@@ -77,40 +81,75 @@ const Projects = () => {
   ];
 
   return (
-    <ScrollAnimation className={styles.projectContainer}>
-      {projects.map((project, index) => (
-        <motion.div whileHover={{ scale: 1.2 }}
-        onHoverStart={event => {}}
-        onHoverEnd={event => {}} className={styles.projectCard} key={index} >
-          <ReactCardFlip
-            isFlipped={flippedIndex === index}
-            flipDirection="horizontal"
+    <>
+      {/* Project Cards */}
+      <ScrollAnimation className={styles.projectContainer}>
+        {projects.map((project, index) => (
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className={styles.projectCard}
+            key={index}
+            onClick={() => openModal(project)} // Open modal on click
           >
-            {/* Front */}
-            <div>
-              <ProjectFront
-                projectName={project.name}
-                projectImage={project.image}
-                handleClick={() => handleClick(index)}
-              />
+            <ReactCardFlip
+              isFlipped={flippedIndex === index}
+              flipDirection="horizontal"
+            >
+              {/* Front */}
+              <div>
+                <ProjectFront
+                  projectName={project.name}
+                  projectImage={project.image}
+                  handleClick={() => handleClick(index)}
+                />
+              </div>
+
+              {/* Back */}
+              <div>
+                <ProjectBack
+                  projectDescription={project.description}
+                  projectTechnologies={project.technologies}
+                  projectLinks={project.links}
+                  projectRole={project.role}
+                  handleClick={() => handleClick(index)}
+                />
+              </div>
+            </ReactCardFlip>
+          </motion.div>
+        ))}
+      </ScrollAnimation>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            className={styles.modal}
+            layout
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className={styles.modalContent}>
+              <h2>{selectedProject.name}</h2>
+              <img src={selectedProject.image} alt={selectedProject.name} />
+              <p>{selectedProject.description}</p>
+              <p><strong>Technologies:</strong> {selectedProject.technologies}</p>
+              <p><strong>Role:</strong> {selectedProject.role}</p>
+              <div>
+                {selectedProject.links.map((link, idx) => (
+                  <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+              <button onClick={closeModal}>Close</button>
             </div>
-  
-            {/* Back */}
-            <div>
-              <ProjectBack
-                projectDescription={project.description}
-                projectTechnologies={project.technologies}
-                projectLinks={project.links}
-                projectRole={project.role}
-                handleClick={() => handleClick(index)}
-              />
-            </div>
-          </ReactCardFlip>
-        </motion.div>
-      ))}
-    </ScrollAnimation>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
-  
 };
 
 export default Projects;
