@@ -60,7 +60,9 @@ function Experience() {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 1 } }
   }}>
+  
             <Tab.Container defaultActiveKey="0">
+            <h1 className={styles.JobHeader}>Work Experience</h1>
               <div className={styles.JobBox}>
               <Row className="mt-3 align-items-start">
                 {/* Left Column with Job List */}
