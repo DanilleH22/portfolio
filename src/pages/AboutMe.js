@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Image, Container } from "react-bootstrap";
 import headshot from '../assets/headshot.jpg';
-import styles from '../styles/AbouMe.module.css';
+import styles from '../styles/AboutMe.module.css';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const AboutMe = () => {
