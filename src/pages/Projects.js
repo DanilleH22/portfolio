@@ -9,6 +9,7 @@ import Proj4 from '../assets/project4.png';
 import Proj5 from '../assets/project5.png';
 import styles from '../styles/Projects.module.css';
 import {Container } from 'react-bootstrap'
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const Projects = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);
@@ -77,6 +78,7 @@ const Projects = () => {
 
   return (
     <Container style={{ width: '100%' }}>
+      <ScrollAnimation>
     <div className={styles.projectContainer}>
       {projects.map((project, index) => (
         <div className={styles.projectCard} key={index} onClick={() => handleClick(index)}>
@@ -105,6 +107,7 @@ const Projects = () => {
         </div>
       ))}
     </div>
+    </ScrollAnimation>
     </Container>
   );
 };
