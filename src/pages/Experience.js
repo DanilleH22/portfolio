@@ -62,7 +62,7 @@ function Experience() {
   }}>
   
             <Tab.Container defaultActiveKey="0">
-            <h1 className={styles.JobHeader}>Work Experience</h1>
+            <h1 className={styles.JobHeader}><strong>Work Experience</strong></h1>
               <div className={styles.JobBox}>
               <Row className="mt-3 align-items-start">
                 {/* Left Column with Job List */}

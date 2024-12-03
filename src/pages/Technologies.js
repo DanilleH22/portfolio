@@ -13,7 +13,7 @@ function Technologies() {
   }}>
     {/* Technologies & Tools Column */}
       <Row className='text-center' >
-        <h4>Technologies & Tools</h4>
+        <h4><strong>Technologies & Tools</strong></h4>
         <p xs={8} className='d-flex justify-content-center'>Throughout my journey as a software developer, I have worked with a diverse range of technologies, frameworks, and tools. Below are some of the key ones that I regularly use in my projects:</p>
         <Col md={3} xs={6} className={styles.TechnologiesListCol}>
         <h6> Languages:</h6>
@@ -43,7 +43,7 @@ function Technologies() {
         </ul>
         </div>
         </Col>
-        
+
         {/* APIs & Tools Column */}
         <Col md={3} xs={6} className={styles.TechnologiesListCol}>
         <h6>APIs & Tools</h6>
