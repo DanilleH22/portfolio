@@ -25,7 +25,7 @@ const ScrollAnimation = ({ children, animationVariants, className }) => {
   return (
     <motion.div
       ref={ref}
-      variants={animationVariants || defaultVariants} // Use provided or default
+      variants={animationVariants || defaultVariants}
       initial="hidden"
       animate={controls}
       className={className}

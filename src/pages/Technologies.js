@@ -11,6 +11,7 @@ function Technologies() {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 1 } }
   }}>
+    {/* Technologies & Tools Column */}
       <Row className='text-center' >
         <h4>Technologies & Tools</h4>
         <p xs={8} className='d-flex justify-content-center'>Throughout my journey as a software developer, I have worked with a diverse range of technologies, frameworks, and tools. Below are some of the key ones that I regularly use in my projects:</p>
@@ -28,6 +29,8 @@ function Technologies() {
         </ul>
         </div>
         </Col>
+
+        {/* Frameworks & Libraries column */}
         <Col md={3} xs={6} className={styles.TechnologiesListCol}>
         <h6>Frameworks & Libraries</h6>
         <div className='d-flex justify-content-start'>
@@ -40,6 +43,8 @@ function Technologies() {
         </ul>
         </div>
         </Col>
+        
+        {/* APIs & Tools Column */}
         <Col md={3} xs={6} className={styles.TechnologiesListCol}>
         <h6>APIs & Tools</h6>
         <div className='d-flex justify-content-start'>
@@ -49,6 +54,8 @@ function Technologies() {
         </ul>
         </div>
         </Col>
+
+        {/* Development Environments Column */}
         <Col md={3} xs={6} className={styles.TechnologiesListCol}>
           <h6>Development Environments</h6>
           <div className='d-flex justify-content-start'>

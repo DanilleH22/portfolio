@@ -1,11 +1,15 @@
+/* Technologyy lists */
 .TechnologiesList {
     list-style:square;
     list-style-position: inside;
 }
 
+/* List column */
 .TechnologiesListCol {
     text-align: start;
 }
+
+/* Technology box */
 .TechBox {
     padding: 30px;
     margin-bottom: 30px;

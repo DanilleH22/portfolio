@@ -1,3 +1,4 @@
+/* Project card container */
 .projectContainer {
     display: flex;
     flex-wrap: wrap; 
@@ -5,7 +6,7 @@
     justify-content: center; 
     padding: 20px;
 }
-
+/* Project card */
 .projectCard {
     padding: 20px;
     position: relative;
@@ -17,6 +18,7 @@
     margin: 20px;
 }
 
+/* Project photos */
 .projectPhoto {
     width: 100%;
     height: auto;
@@ -25,6 +27,7 @@
     object-fit: cover;
 }
 
+/* Project cards */
 .BackCard, .FrontCard{
     height: 275px;
     display: grid;
