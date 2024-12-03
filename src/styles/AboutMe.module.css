@@ -5,7 +5,7 @@
 
 /* Description Text */
 .MyDescription {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   padding-left: 10px !important;
   display: flex;
@@ -26,7 +26,7 @@ img {
   }
 
   .MyDescription {
-    font-size: 14px; 
+    font-size: 16px; 
     flex-direction: column; 
     text-align: center; 
   }
