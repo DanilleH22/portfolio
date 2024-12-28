@@ -99,8 +99,13 @@
   }
 
   /* Ensure job list and description take full width */
-  .OuterJob, .Description {
+  .Description {
     width: 100%;
+  }
+
+  .OuterJob{
+    width: 100%;
+    height: 250px;
   }
 
   /* Adjust Job Name styling for mobile */
