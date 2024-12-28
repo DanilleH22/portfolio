@@ -26,4 +26,10 @@
     box-shadow: 0 12px 16px 0 rgba(209, 205, 205, 0.1), 0 17px 50px 0 rgba(209, 205, 205, 0.1);
   }
 
+  @media (max-width: 768px) {
+    .Name, .Resume, .JobRole  {
+      font-size: 14px;
+    }
+    
+  }
 /* #b8bfc9 */
