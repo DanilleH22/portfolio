@@ -14,6 +14,7 @@ function App() {
   return (
     <Container fluid="md"
     className='testing'
+    style={{ width: '100%', overflow: 'hidden'}}
     >
     <div className="App">
       <NavBar /> 
