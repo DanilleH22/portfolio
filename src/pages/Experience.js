@@ -89,7 +89,7 @@ function Experience() {
                 <Tab.Pane eventKey={index.toString()} key={index}>
                   <h5><strong>{item.role}</strong></h5>
                   <p>{item.date}</p>
-                  <ul>
+                  <ul style={{ textAlign: 'left'}}>
                     {item.description.map((point, i) => <li key={i}>{point}</li>)}
                   </ul>
                 </Tab.Pane>
