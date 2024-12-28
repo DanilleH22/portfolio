@@ -26,7 +26,7 @@ export default function ContactMe() {
   const handleClick = () => setLoading(true);
 
   return (
-    <Container fluid style={{ width: '75%'}}>
+    <Container fluid style={{ width: '100%'}}>
       <ScrollAnimation className={styles.ContactMeCard}>
       <Row className="pt-3 mb-3 mt-3 text-center">
         <h1><strong>Contact Me</strong></h1>
