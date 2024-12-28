@@ -16,7 +16,7 @@ const NavBar = () => {
       </Col>
       {/* Job role */}
       <Col>
-      <div>
+      <div className={styles.JobRole}>
         <strong>Junior Software Developer</strong>
       </div>
       </Col>
