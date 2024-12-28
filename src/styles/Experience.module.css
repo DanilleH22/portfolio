@@ -1,11 +1,10 @@
-Job Name Styling
+/* Job Name Styling */
 .JobName {
   border-left: 2px solid rgb(57, 52, 52);
-  margin-bottom: 5px 0;
+  margin-bottom: 5px;
   padding-left: 10px;
   transition: background-color 0.3s ease;
   font-size: 16px;
-  
 }
 
 /* Hover Effect for Job Name */
@@ -28,9 +27,9 @@ Job Name Styling
   width: 100%;
   height: 350px;
   justify-content: space-evenly;
-  
 }
 
+/* Tab Content Styling */
 .TabContent {
   margin-top: 10px;
   text-align: left;
@@ -57,9 +56,6 @@ Job Name Styling
   justify-content: flex-start; 
 }
 
-
-
-
 /* Parent Row Styling */
 .JobBox {
   display: flex;
@@ -73,35 +69,61 @@ Job Name Styling
   height: 400px;
 }
 
-/* For smaller screens */
+/* Tab Container Styling (For Smaller Screens) */
+.TabContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.TabContainer .nav-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.TabContent {
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 10px; 
+}
+
+/* For Smaller Screens (max-width: 768px) */
 @media (max-width: 768px) {
-  .JobName {
-    padding-left: 2px 0;
-    margin-bottom: 5px;
-    font-size: 12px;
-  }
-
-  /* .Description {
-    font-size: 12px;
-    width: 100%;
-  } */
-
+  /* Job Box (Stack vertically for mobile) */
   .JobBox {
-    flex-direction: column; 
+    flex-direction: column;
+    height: auto; 
+    padding: 15px;
   }
 
+  /* Ensure job list and description take full width */
   .OuterJob, .Description {
-    width: 100%; 
+    width: 100%;
   }
-}
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  
-}
+  /* Adjust Job Name styling for mobile */
+  .JobName {
+    font-size: 14px;
+    padding-left: 5px;
+    margin-bottom: 8px;
+  }
 
-/* Job title */
-.JobHeader {
-  position: absolute;
-  right: 40%;
+  /* Adjust font size of description */
+  .Description {
+    font-size: 14px;
+  }
+
+  /* Tab Content styling for mobile */
+  .TabContent ul {
+    padding-left: 20px;
+  }
+
+  /* Header styling for mobile */
+  .JobHeader {
+    font-size: 20px;
+    position: absolute;
+  right: 35%;
+  }
 }
