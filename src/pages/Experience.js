@@ -64,6 +64,7 @@ function Experience() {
   <Tab.Container defaultActiveKey="0">
   
   <div className={styles.JobBox}>
+    <Col>
   <h1 className={styles.JobHeader}><strong>Work Experience</strong></h1>
     <Row className="mt-3 align-items-start">
       {/* Larger Screens */}
@@ -127,6 +128,7 @@ function Experience() {
         </Col>
       )}
     </Row>
+    </Col>
   </div>
 </Tab.Container>
             </ScrollAnimation>
