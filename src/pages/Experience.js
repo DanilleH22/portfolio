@@ -51,59 +51,84 @@ function Experience() {
           date: "2021-2021"
       }
         ]
-
+        const [isMobile, setIsMobile] = useState(false);
         const [activeIndex, setActiveIndex] = useState(null);
 
         return (
-          <Container fluid style={{ maxWidth: '1000px' }}>
+          <Container fluid style={{ width: '100%'}}>
             <ScrollAnimation animationVariants={{
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 1 } }
   }}>
   
-            <Tab.Container defaultActiveKey="0">
-            <h1 className={styles.JobHeader}><strong>Work Experience</strong></h1>
-              <div className={styles.JobBox}>
-              <Row className="mt-3 align-items-start">
-                {/* Left Column with Job List */}
-                <Col lg={4} xs={12} className={styles.OuterJob}>
-                  <Nav className={styles.Job}>
-                    {data.map((item, index) => (
-                      <Nav.Item
-                      key={index}
-                      className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
-                      style={{ marginBottom: '5px' }} 
-                      onClick={() => setActiveIndex(index)}
-                    >                    
-                        <Nav.Link eventKey={index.toString()} className='text-start' style={{ color: '#B8C6D9' }}>
-                          {item.job}
-                        </Nav.Link>
-                      </Nav.Item>
-                    ))}
-                  </Nav>
-                </Col>
-      
-                {/* Right Column with Job Details */}
-                <Col lg={8} xs={12} className={styles.Description}>
-                  <Tab.Content style={{ width: '100%' }}>
-                    {data.map((item, index) => (
-                      <Tab.Pane eventKey={index.toString()} key={index}>
-                        <h5 className='d-flex justify-content-start ps-4'>
-                          <strong>{item.role}</strong>
-                        </h5>
-                        <p className='d-flex justify-content-start ps-4'>{item.date}</p>
-                        <ul style={{ listStyleType: 'circle', textAlign: 'left', color: '#B8C6D9' }}>
-                          {item.description.map((point, i) => (
-                            <li key={i}>{point}</li>
-                          ))}
-                        </ul>
-                      </Tab.Pane>
-                    ))}
-                  </Tab.Content>
-                </Col>
-              </Row>
-              </div>
-            </Tab.Container>
+  <Tab.Container defaultActiveKey="0">
+  
+  <div className={styles.JobBox}>
+  <h1 className={styles.JobHeader}><strong>Work Experience</strong></h1>
+    <Row className="mt-3 align-items-start">
+      {/* Larger Screens */}
+      {!isMobile && (
+        <>
+          <Col lg={4} xs={12} className={styles.OuterJob}>
+            <Nav className={styles.Job}>
+              {data.map((item, index) => (
+                <Nav.Item
+                  key={index}
+                  className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <Nav.Link eventKey={index.toString()} style={{ color: '#B8C6D9' }}>{item.job}</Nav.Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+          </Col>
+          <Col lg={8} xs={12} className={styles.Description}>
+            <Tab.Content style={{ width: '100%' }}>
+              {data.map((item, index) => (
+                <Tab.Pane eventKey={index.toString()} key={index}>
+                  <h5><strong>{item.role}</strong></h5>
+                  <p>{item.date}</p>
+                  <ul>
+                    {item.description.map((point, i) => <li key={i}>{point}</li>)}
+                  </ul>
+                </Tab.Pane>
+              ))}
+            </Tab.Content>
+          </Col>
+        </>
+      )}
+
+      {/* Mobile Screens */}
+      {isMobile && (
+        <Col xs={12} className={styles.TabContainer}>
+          <Nav variant="tabs" className="flex-column">
+            {data.map((item, index) => (
+              <Nav.Item
+              key={index}
+              className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
+              onClick={() => setActiveIndex(index)}
+            >
+                <Nav.Link eventKey={index.toString()}>{item.job}</Nav.Link>
+                
+              </Nav.Item>
+            ))}
+          </Nav>
+          <Tab.Content style={{ width: '75%' }}>
+            {data.map((item, index) => (
+              <Tab.Pane eventKey={index.toString()} key={index}>
+                <h5><strong>{item.role}</strong></h5>
+                <p>{item.date}</p>
+                <ul>
+                  {item.description.map((point, i) => <li key={i}>{point}</li>)}
+                </ul>
+              </Tab.Pane>
+            ))}
+          </Tab.Content>
+        </Col>
+      )}
+    </Row>
+  </div>
+</Tab.Container>
             </ScrollAnimation>
           </Container>
         );
