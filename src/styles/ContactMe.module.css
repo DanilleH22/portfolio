@@ -1,3 +1,4 @@
+/*Congtact me box*/
 .ContactMeCard {
     padding: 20px;
     position: relative;
@@ -7,3 +8,26 @@
     box-shadow: -10px 10px 10px rgba(209, 205, 205, 0.1); 
 
 }
+/* Buttons for contact */
+
+.contactButton {
+    width: auto;
+    font-size: 20px; 
+   
+    border: 2px solid #333; 
+  }
+  
+  @media (max-width: 768px) {
+    .contactButton {
+      font-size: 12px;
+      padding: 10px 20px; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contactButton {
+      font-size: 10px;
+      padding: 8px 16px; 
+    }
+  }
+  
