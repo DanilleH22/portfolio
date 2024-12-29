@@ -33,47 +33,49 @@ export default function ContactMe() {
         <p>I am always open to collaborating with people! Feel free to check me out on LinkedIn or Email.</p>
         <p>If you are a recruiter or employer, feel free to download my resume or email me!</p>
       </Row>
-
+      
       <Row className="d-flex justify-content-center mb-3">
-        {/* LinkedIn Button */}
-        <Col xs={4} md={4} className="mb-2 d-flex justify-content-center">
-          <Button
-            href="https://www.linkedin.com/in/danille-hamilton-971b29206"
-            target="_blank"
-            variant="outline-secondary"
-            className="w-100"
-          >
-            LinkedIn
-          </Button>
-        </Col>
+  {/* LinkedIn Button */}
+  <Col xs={4} sm={4} md={4} className="mb-2 d-flex justify-content-end p-0">
+    <Button
+      href="https://www.linkedin.com/in/danille-hamilton-971b29206"
+      target="_blank"
+      variant="outline-secondary"
+      className={styles.contactButton}
+    >
+      LinkedIn
+    </Button>
+  </Col>
 
-        {/* Email Button */}
-        <Col xs={4} md={4} className="mb-2 d-flex justify-content-center">
-          <Button
-            variant="outline-secondary"
-            disabled={isLoading}
-            onClick={!isLoading ? handleClick : null}
-            href="mailto:hamiltonkdanille@hotmail.com"
-            className="w-100"
-          >
-            {isLoading ? 'Loading…' : 'Email me'}
-          </Button>
-        </Col>
+  {/* Email Button */}
+  <Col xs={4} sm={4} md={4} className="mb-2 d-flex justify-content-center p-0">
+    <Button
+      variant="outline-secondary"
+      disabled={isLoading}
+      onClick={!isLoading ? handleClick : null}
+      href="mailto:hamiltonkdanille@hotmail.com"
+      className={styles.contactButton}
+    >
+      {isLoading ? 'Loading…' : 'Email me'}
+    </Button>
+  </Col>
 
-        {/* Resume Download Button */}
-        <Col xs={4} md={4} className="mb-2 d-flex justify-content-center">
-          <Button
-            href={danilleCv}
-            download="danilleCv"
-            target="_blank"
-            rel="noreferrer"
-            variant="outline-secondary"
-            className="w-100"
-          >
-            Resume
-          </Button>
-        </Col>
-      </Row>
+  {/* Resume Download Button */}
+  <Col xs={4} sm={4} md={4} className="mb-2 d-flex justify-content-left p-0">
+    <Button
+      href={danilleCv}
+      download="danilleCv"
+      target="_blank"
+      rel="noreferrer"
+      variant="outline-secondary"
+      className={styles.contactButton}
+    >
+      Resume
+    </Button>
+  </Col>
+</Row>
+
+
       </ScrollAnimation>
     </Container>
   );
