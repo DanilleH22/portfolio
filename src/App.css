@@ -1,3 +1,14 @@
+:root {
+  color: #fff;
+  --primary-spacing: 1.5rem;
+  
+}
+
+.Container {
+  width: 85%;
+  max-width: 1200px;
+}
+
 .App {
   text-align: center;
 }
