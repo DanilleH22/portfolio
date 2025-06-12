@@ -1,55 +1,82 @@
-.MyDescriptionOuter {
-  padding: 20px;
-  margin-top: 5px;
+/* Variables for consistent styling */
+
+
+/* Card Styling */
+.AboutMeCard {
+  padding: var(--primary-spacing);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px #427fb7;
+  margin: 2rem 0;
+  background-color: #88B4E6;
 }
 
-/* Description Text */
-.MyDescription {
-  font-size: 18px;
-  line-height: 1.6;
-  padding-left: 10px !important;
+/* Text Column */
+.TextColumn {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #88B4E6;
 }
 
-img {
-  max-width: 100%; 
-  height: auto; 
+.Title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; 
+  background-color: #88B4E6;
+}
+
+.Paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  background-color: #88B4E6;
+}
+
+/* Image Column */
+.ImageColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #88B4E6;
+}
+
+.Headshot {
+  width: 100%;
+  max-width: 315px;
+  height: auto;
+  border-radius: var(--border-radius);
+  object-fit: cover;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .MyDescriptionOuter {
-    padding: 10px;
+  .Container {
+    width: 95%;
   }
 
-  .MyDescription {
-    font-size: 16px; 
-    flex-direction: column; 
-    text-align: center; 
+  .Row {
+    flex-direction: column-reverse;
   }
 
-  img {
-    width: 70%;
-    height: 70%;
+  .Title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .Paragraph {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .Headshot {
+    max-width: 250px;
+    margin-top: 1rem;
   }
 }
 
-@media (max-width:1190px) {
-  img {
-    width: 85%;
-    height: 80%;
-  }
-}
-
-/* About Me Card Styling */
-.AboutMeCard {
-  padding: 20px;
-  position: relative;
-  border-radius: 20px;
-  box-shadow: -10px 10px 10px rgba(209, 205, 205, 0.1); 
-  margin-bottom: 30px;
-  margin-top: 15px;
+.tester {
+  
 }
