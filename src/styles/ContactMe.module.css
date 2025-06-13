@@ -4,24 +4,51 @@
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
-    border-radius: 20px;
-    box-shadow: -10px 10px 10px rgba(209, 205, 205, 0.1); 
-
+    border-radius: 10px;
+  box-shadow: 0 0 10px 10px #427fb8;
+    background-color: #88B4E6;
+} 
+.Row {
+  background-color: #88B4E6;
+  padding-bottom: 5px;
 }
 /* Buttons for contact */
 
 .contactButton {
     width: auto;
     font-size: 20px; 
-   
     border: 2px solid #333; 
+    background-color: #88B4E6;
+    color: #4A5568;
   }
+  p  {
+    background-color: #88B4E6;
+    color: #4A5568;
+  }
+
+  .customCol, h1, strong {
+    background-color: #88B4E6;
+  }
+
+  /* .custom-col {
+   
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    justify-content: left;
+    padding: 0;
+  } */
   
   @media (max-width: 768px) {
     .contactButton {
       font-size: 12px;
       padding: 10px 20px; 
     }
+    
+    .Container {
+      width: 95%;
+    }
+  
   }
   
   @media (max-width: 576px) {
