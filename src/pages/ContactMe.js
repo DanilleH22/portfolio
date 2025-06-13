@@ -26,17 +26,17 @@ export default function ContactMe() {
   const handleClick = () => setLoading(true);
 
   return (
-    <Container fluid style={{ width: '100%'}}>
+    <Container className={styles.Container}>
       <ScrollAnimation className={styles.ContactMeCard}>
-      <Row className="pt-3 mb-3 mt-3 text-center">
+      <Row className={styles.Row}>
         <h1><strong>Contact Me</strong></h1>
         <p>I am always open to collaborating with people! Feel free to check me out on LinkedIn or Email.</p>
         <p>If you are a recruiter or employer, feel free to download my resume or email me!</p>
       </Row>
       
-      <Row className="d-flex justify-content-center mb-3">
+      <Row className={styles.Row}>
   {/* LinkedIn Button */}
-  <Col xs={4} sm={4} md={4} className="mb-2 d-flex justify-content-end p-0">
+  <Col xs={4} sm={4} md={4} className={`${styles.customCol} mb-2 d-flex justify-content-end p-0`}>
     <Button
       href="https://www.linkedin.com/in/danille-hamilton-971b29206"
       target="_blank"
@@ -48,7 +48,7 @@ export default function ContactMe() {
   </Col>
 
   {/* Email Button */}
-  <Col xs={4} sm={4} md={4} className="mb-2 d-flex justify-content-center p-0">
+  <Col xs={4} sm={4} md={4} className={`${styles.customCol}  mb-2 d-flex justify-content-center p-0`}>
     <Button
       variant="outline-secondary"
       disabled={isLoading}
@@ -61,7 +61,7 @@ export default function ContactMe() {
   </Col>
 
   {/* Resume Download Button */}
-  <Col xs={4} sm={4} md={4} className="mb-2 d-flex justify-content-left p-0">
+  <Col xs={4} sm={4} md={4} className={`${styles.customCol}  mb-2 d-flex justify-content-start p-0`}>
     <Button
       href={danilleCv}
       download="danilleCv"
