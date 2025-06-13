@@ -1,21 +1,24 @@
 /* Job Name Styling */
 .JobName {
-  border-left: 2px solid rgb(57, 52, 52);
-  margin-bottom: 5px;
-  padding-left: 10px;
+  
+  background-color: #88B4E6;
   transition: background-color 0.3s ease;
-  font-size: 16px;
+  padding: 0.8rem 1rem;
+  margin: 0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 /* Hover Effect for Job Name */
 .JobName:hover {
-  background-color: gray;
+  background-color:  #2D3748;;
   cursor: pointer;
 }
 
 /* Active Job State */
 .active {
-  background-color: gray;
+  background-color: #2D3748;
   font-weight: bold;
   color: white;
 }
@@ -27,6 +30,7 @@
   width: 100%;
   height: 350px;
   justify-content: space-evenly;
+  background-color: #88B4E6;
 }
 
 /* Tab Content Styling */
@@ -34,6 +38,7 @@
   margin-top: 10px;
   text-align: left;
   color: #B8C6D9;
+  background-color: #88B4E6;
 }
 
 /* Left Column - Job List */
@@ -44,6 +49,12 @@
   justify-content: flex-start; 
   gap: 10px; 
   height: 350px;
+  background-color: #88B4E6;
+  
+}
+
+h5, ul, li, strong, .CustomPane, .customRow {
+  background-color: #88B4E6;
 }
 
 /* Right Column - Job Description */
@@ -54,6 +65,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
+  background-color: #88B4E6;
 }
 
 /* Parent Row Styling */
@@ -63,10 +75,11 @@
   justify-content: space-between; 
   align-items: flex-start; 
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 5px rgba(209, 205, 205, 0.1); 
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px #427fb8;
   gap: 20px; 
   height: 450px;
+  background-color: #88B4E6;
 }
 
 /* Tab Container Styling (For Smaller Screens) */
@@ -75,6 +88,7 @@
   flex-direction: column;
   gap: 15px;
   width: 100%;
+  background-color: #88B4E6;
 }
 
 .TabContainer .nav-tabs {
@@ -87,7 +101,12 @@
   margin-top: 20px;
   font-size: 14px;
   padding: 10px; 
+  background-color: #88B4E6;
 }
+
+/* .Row, .JobHeader  {
+  background-color: #88B4E6 !important;
+} */
 
 /* For Smaller Screens (max-width: 768px) */
 @media (max-width: 768px) {
