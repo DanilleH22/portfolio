@@ -4,10 +4,17 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import styles from "../styles/Experience.module.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 function Experience() {
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   let data = [
             {
@@ -55,7 +62,7 @@ function Experience() {
         const [activeIndex, setActiveIndex] = useState(null);
 
         return (
-          <Container fluid style={{ width: '100%'}}>
+          <Container fluid >
             <ScrollAnimation animationVariants={{
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 1 } }
@@ -114,7 +121,7 @@ function Experience() {
               </Nav.Item>
             ))}
           </Nav>
-          <Tab.Content style={{ width: '75%' }}>
+          <Tab.Content style={{ width: '100%' }}>
             {data.map((item, index) => (
               <Tab.Pane eventKey={index.toString()} key={index}>
                 <h5><strong>{item.role}</strong></h5>
