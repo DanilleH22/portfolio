@@ -5,7 +5,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
-  box-shadow: 0 0 10px 10px #427fb8;
+    box-shadow: 0 0 10px 10px #427fb8;
     background-color: #88B4E6;
 } 
 .Row {
@@ -25,7 +25,6 @@
     background-color: #88B4E6;
     color: #4A5568;
   }
-
   .customCol, h1, strong {
     background-color: #88B4E6;
   }
