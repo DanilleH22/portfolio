@@ -8,7 +8,7 @@ import Proj3 from '../assets/project3.png';
 import Proj4 from '../assets/project4.png';
 import Proj5 from '../assets/project5.png';
 import styles from '../styles/Projects.module.css';
-import {Container } from 'react-bootstrap'
+import {Container } from 'react-bootstrap';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Projects = () => {
@@ -77,7 +77,7 @@ const Projects = () => {
   ];
 
   return (
-    <Container style={{ width: '100%' }}>
+    <Container className={styles.Container}>
       <ScrollAnimation>
     <div className={styles.projectContainer}>
       {projects.map((project, index) => (
@@ -102,6 +102,7 @@ const Projects = () => {
                 projectLinks={project.links}
                 projectRole={project.role}
               />
+              
             </div>
           </ReactCardFlip>
         </div>

@@ -7,7 +7,7 @@ const ProjectBack = ({ projectDescription, projectLinks, projectTechnologies, pr
       <p>{projectDescription}</p>
       <p><strong>Role: </strong>{projectRole}</p>
       <p><strong>Technology:</strong> {projectTechnologies}</p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginTop: '10px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginTop: '10px', backgroundColor: '#88B4E6' }}>
         {projectLinks.map((link, index) => (
           <a
             key={index}
