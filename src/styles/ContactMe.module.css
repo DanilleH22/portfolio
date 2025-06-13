@@ -30,14 +30,6 @@
     background-color: #88B4E6;
   }
 
-  /* .custom-col {
-   
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 2rem;
-    justify-content: left;
-    padding: 0;
-  } */
   
   @media (max-width: 768px) {
     .contactButton {

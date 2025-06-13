@@ -7,6 +7,10 @@
     padding: 20px;
     
 }
+
+.projectCard:hover {
+    transform: translateY(-10px);
+  }
 /* Project card */
 .projectCard {
     padding: 20px; 
@@ -43,7 +47,6 @@
  p, a, h3, strong  {
     background-color: #88B4E6;
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
