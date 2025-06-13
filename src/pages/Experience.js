@@ -64,9 +64,9 @@ function Experience() {
   <Tab.Container defaultActiveKey="0">
   
   <div className={styles.JobBox}>
-    <Col>
+    <Col style={{ backgroundColor: '#88B4E6' }}>
   <h1 className={styles.JobHeader}><strong>Work Experience</strong></h1>
-    <Row className="mt-3 align-items-start">
+    <Row className={`${styles.customRow} + mt-3 align-items-start`}>
       {/* Larger Screens */}
       {!isMobile && (
         <>
@@ -84,9 +84,9 @@ function Experience() {
             </Nav>
           </Col>
           <Col lg={8} xs={12} className={styles.Description}>
-            <Tab.Content style={{ width: '100%' }}>
+            <Tab.Content style={{ width: '100%', backgroundColor: '#88B4E6' }}>
               {data.map((item, index) => (
-                <Tab.Pane eventKey={index.toString()} key={index}>
+                <Tab.Pane eventKey={index.toString()} key={index} className={styles.CustomPane}>
                   <h5><strong>{item.role}</strong></h5>
                   <p>{item.date}</p>
                   <ul style={{ textAlign: 'left'}}>
