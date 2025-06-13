@@ -14,7 +14,7 @@ const ProjectBack = ({ projectDescription, projectLinks, projectTechnologies, pr
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: 'none', fontSize: '14px' }}
+            style={{ textDecoration: 'none', fontSize: '14px', backgroundColor: '#88B4E6' }}
           >
             {link.label}
           </a>
