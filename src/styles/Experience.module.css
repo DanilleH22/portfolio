@@ -108,16 +108,18 @@ li{
   background-color: #88B4E6;
 }
 
-/* .Row, .JobHeader  {
-  background-color: #88B4E6 !important;
-} */
 
 /* For Smaller Screens (max-width: 768px) */
 @media (max-width: 768px) {
+  .customRow {
+    flex-direction: column;
+    height: auto !important;
+  }
+
   /* Job Box (Stack vertically for mobile) */
   .JobBox {
     flex-direction: column;
-    height: auto; 
+    height: auto !important; 
     padding: 15px;
   }
 
@@ -140,7 +142,8 @@ li{
 
   /* Adjust font size of description */
   .Description {
-    font-size: 14px;
+    width: 100%;
+    padding: 10px;
   }
 
   /* Tab Content styling for mobile */
