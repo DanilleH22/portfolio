@@ -4,17 +4,12 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import styles from "../styles/Experience.module.css";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 function Experience() {
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+ 
 
   let data = [
             {
