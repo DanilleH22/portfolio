@@ -1,11 +1,8 @@
-/* Variables for consistent styling */
-
-
 /* Card Styling */
 .AboutMeCard {
   padding: var(--primary-spacing);
   border-radius: 10px;
-  box-shadow: 0 0 10px 10px #427fb7;
+  box-shadow: 0 0 10px 10px #427fb8;
   margin: 2rem 0;
   background-color: #88B4E6;
 }
@@ -22,7 +19,6 @@
 .Title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #ffffff; 
   background-color: #88B4E6;
 }
 
@@ -75,8 +71,4 @@
     max-width: 250px;
     margin-top: 1rem;
   }
-}
-
-.tester {
-  
 }
