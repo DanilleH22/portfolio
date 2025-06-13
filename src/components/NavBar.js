@@ -12,19 +12,19 @@ const NavBar = () => {
       {/* My name */}
       <Col>
       <div className={styles.Name} >
-        <strong>Danille Hamilton</strong></div>
+        <b>Danille Hamilton</b></div>
       </Col>
       {/* Job role */}
       <Col>
       <div className={styles.JobRole}>
-        <strong>Junior Software Developer</strong>
+        <b>Junior Software Developer</b>
       </div>
       </Col>
       {/* Resume button */}
       <Col style={{ fontSize: '20px' }}>
     <div className={styles.Resume}>
       <a href={danilleCv} download="danilleCv" target='_blank' rel="noreferrer">
-      <button><strong>Resume</strong></button></a>
+      <button><b>Resume</b></button></a>
     </div>
     </Col>
     
