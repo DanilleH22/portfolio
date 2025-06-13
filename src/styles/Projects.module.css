@@ -5,15 +5,17 @@
     gap: 20px; 
     justify-content: center; 
     padding: 20px;
+    
 }
 /* Project card */
 .projectCard {
-    padding: 20px;
+    padding: 20px; 
     position: relative;
     width: 300px; 
     height: auto; 
-    border-radius: 20px;
-    box-shadow: -10px 10px 10px rgba(209, 205, 205, 0.1); 
+    border-radius: 10px;
+  box-shadow: 0 0 10px 10px #427fb7;
+  background-color: #88B4E6;
     text-align: center; 
     margin: 20px;
 }
@@ -25,6 +27,7 @@
     border-radius: 10px; 
     margin-bottom: 10px; 
     object-fit: cover;
+    background-color: #88B4E6;
 }
 
 /* Project cards */
@@ -33,5 +36,26 @@
     display: grid;
   align-items: center;
   justify-content: center;
+  background-color: #88B4E6;
 
 }
+
+ p, a, h3, strong  {
+    background-color: #88B4E6;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .Container {
+      width: 95%;
+    }
+    
+    .projectContainer{
+      margin-bottom: 1rem;
+    }
+    
+    .CategoryCard {
+      padding: 1rem;
+    }
+  }
