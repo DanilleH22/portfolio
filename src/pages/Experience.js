@@ -80,7 +80,7 @@ function Experience() {
                   className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <Nav.Link eventKey={index.toString()} style={{ color: '#B8C6D9' }}>{item.job}</Nav.Link>
+                  <Nav.Link eventKey={index.toString()} style={{ color: '#2D3748' }}>{item.job}</Nav.Link>
                 </Nav.Item>
               ))}
             </Nav>
