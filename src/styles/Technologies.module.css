@@ -1,9 +1,9 @@
 /* Main Tech Box */
   .TechBox {
-    background-color: #88B4E6;
-    padding: 2rem;
-    border-radius: 10px;
-  box-shadow: 0 0 10px 10px #427fb7;
+    /* background-color: #011117;
+    padding: 2rem; */
+    /* border-radius: 10px; */
+  /* box-shadow: 0 0 10px 10px #427fb7; */
     margin: 2rem 0;
   }
   
@@ -11,15 +11,15 @@
     
     margin-bottom: 1.5rem;
     font-size: 2rem;
-    background-color: #88B4E6;
+   
   }
   
   .IntroText {
-    color: #4A5568;
+    color: #cfd8e8;
     margin-bottom: 2rem;
     font-size: 1.1rem;
     padding: 0 1rem;
-    background-color: #88B4E6;
+    background-color: #011117;
   }
   
   /* Category Cards */
@@ -29,7 +29,7 @@
     height: 100%;
     border-top: 4px solid var(--accent-blue);
     transition: transform 0.3s ease;
-    background-color: #88B4E6;
+    background-color: #011117;
   }
   
   .CategoryCard:hover {
@@ -41,21 +41,21 @@
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    background-color: #88B4E6;
+    background-color: #011117;
   }
   
   .TechnologiesList {
     list-style: none;
     padding-left: 0;
     text-align: center;
-    background-color: #88B4E6;
+    background-color: #011117;
   }
   
   .TechnologiesList li {
     padding: 0.3rem 0;
-    color: #2D3748;
+    color: #cfd8e8;
     position: relative;
-    background-color: #88B4E6;
+    background-color: #011117;
   }
   
   .TechnologiesList li:before {
@@ -68,9 +68,73 @@
   }
 
   .TechnologiesCol {
-    background-color: #88B4E6;
+    background-color: #011117;
   }
-  
+
+  .SectionEyebrow {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #4ecdc4;
+  margin-bottom: 0.5rem;
+}
+
+/* Values Section */
+.ValuesSection {
+  padding: 6rem 0;
+  text-align: center;
+ 
+}
+
+.ValuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+ 
+}
+
+
+.ValueCard {
+  background: #011117;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  border: 1px solid #427fb7;
+  transition: all 0.3s ease;
+}
+
+
+.ValueCard:hover {
+  background: #134e6390;
+  border-color: rgba(78, 205, 196, 0.2);
+  transform: translateY(-5px);
+}
+
+.ValueIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: transparent;
+}
+
+.ValueTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  background: transparent;
+}
+
+.ValueDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+}
+
+
+
   /* Responsive Adjustments */
   @media (max-width: 768px) {
     .Container {
