@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from 'react';
-import danilleCv from '../assets/files/danilleCv.pdf'
+import Danille_Hamilton from '../assets/files/Danille-Hamilton.pdf'
 import { Container } from 'react-bootstrap';
 import styles from '../styles/ContactMe.module.css'
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -63,8 +63,8 @@ export default function ContactMe() {
   {/* Resume Download Button */}
   <Col xs={4} sm={4} md={4} className={`${styles.customCol}  mb-2 d-flex justify-content-start p-0`}>
     <Button
-      href={danilleCv}
-      download="danilleCv"
+      href={Danille_Hamilton}
+      download="Danille-Hamilton"
       target="_blank"
       rel="noreferrer"
       variant="outline-secondary"
