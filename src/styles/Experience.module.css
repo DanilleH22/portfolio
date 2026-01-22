@@ -133,8 +133,9 @@ li{
   .OuterJob{
     width: 100%;
     height: 270px;
-    padding: 5px;
+    padding: 15px;
     margin-bottom: 25px;
+    margin-top: 40px;
   }
 
   /* Adjust Job Name styling for mobile */
