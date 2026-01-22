@@ -17,7 +17,7 @@ const NavBar = () => {
       {/* Job role */}
       <Col>
       <div className={styles.JobRole}>
-        <b>Junior Software Developer</b>
+        <b>Senior Data Analyst | Full Stack Developer</b>
       </div>
       </Col>
       {/* Resume button */}
