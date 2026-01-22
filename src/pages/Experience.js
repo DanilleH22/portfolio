@@ -12,6 +12,22 @@ function Experience() {
  
 
   let data = [
+    {
+                job: "First Source",
+                role: "Senior Analyst - Ops BI",
+                description: [
+                 
+                  "Analyse operational and performance data to identify trends, inefficiencies, and improvement opportunities.",
+                  "Build and maintain reports and dashboards to track KPIs, SLAs, and operational performance.",
+                  "Interpret large datasets to support strategic and day-to-day decision-making.",
+                  "Partner with cross-functional stakeholders to understand business needs and deliver data-driven solutions.",
+                  "Ensure data accuracy, consistency, and reliability across reporting outputs.",
+                  "Use SQL and SQL Server Management Studio (SSMS) to query, filter, and analyse operational datasets.",
+                  "Identify inefficiencies and trends within operational data to support process improvement initiatives.",
+                  "Use Power Automate to streamline manual workflows and improve operational efficiency.",
+                ],
+                date: "Jun 2025 - Present"
+            },
             {
                 job: "Eon via First Source",
                 role: "Customer Service Representative",
@@ -20,7 +36,7 @@ function Experience() {
                   "Created and maintained documentation for common customer issues.",
                   "Collaborated with the team to identify and implement process improvements that increased efficiency and customer satisfaction",
                 ],
-                date: "2023-Present"
+                date: "Nov 2023-Jun 2025"
             },
             {
               job: "Birmingham Solihull Foundation Trust",
@@ -42,16 +58,7 @@ function Experience() {
             ],
             date: "2021-2021"
         },
-        {
-          job: "Queen Elizabeth Hospital - NHS",
-          role: "Laboratory Assistant",
-          description: [
-            "Operated and maintained laboratory management systems.", 
-            "Executed quality control tests to ensure laboratory equipment and procedures met regulatory standards.",
-            "Compiled and interpreted laboratory data ensuring accurate and timely results",
-          ],
-          date: "2021-2021"
-      }
+       
         ]
         const [isMobile, setIsMobile] = useState(false);
         const [activeIndex, setActiveIndex] = useState(null);
@@ -66,7 +73,7 @@ function Experience() {
   <Tab.Container defaultActiveKey="0">
   
   <div className={styles.JobBox}>
-    <Col style={{ backgroundColor: '#88B4E6' }}>
+    <Col style={{ backgroundColor: '#011117' }}>
   <h1 className={styles.JobHeader}><strong>Work Experience</strong></h1>
     <Row className={`${styles.customRow} + mt-3 align-items-start`}>
       {/* Larger Screens */}
@@ -80,13 +87,13 @@ function Experience() {
                   className={`${styles.JobName} ${activeIndex === index ? styles.active : ''}`}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <Nav.Link eventKey={index.toString()} style={{ color: '#2D3748' }}>{item.job}</Nav.Link>
+                  <Nav.Link eventKey={index.toString()} style={{ color: '#cfd8e8' }}>{item.job}</Nav.Link>
                 </Nav.Item>
               ))}
             </Nav>
           </Col>
           <Col lg={8} xs={12} className={styles.Description}>
-            <Tab.Content style={{ width: '100%', backgroundColor: '#88B4E6' }}>
+            <Tab.Content style={{ width: '100%', backgroundColor: '#011117' }}>
               {data.map((item, index) => (
                 <Tab.Pane eventKey={index.toString()} key={index} className={styles.CustomPane}>
                   <h5><strong>{item.role}</strong></h5>
