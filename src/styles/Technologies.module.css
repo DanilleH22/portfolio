@@ -1,77 +1,71 @@
 /* Main Tech Box */
-  .TechBox {
-    /* background-color: #011117;
-    padding: 2rem; */
-    /* border-radius: 10px; */
-  /* box-shadow: 0 0 10px 10px #427fb7; */
-    margin: 2rem 0;
-  }
-  
-  .SectionTitle {
-    
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-   
-  }
-  
-  .IntroText {
-    color: #cfd8e8;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    padding: 0 1rem;
-    background-color: #011117;
-  }
-  
-  /* Category Cards */
-  .CategoryCard {
-    border-radius: 12px;
-    padding: 1.5rem 1rem;
-    height: 100%;
-    border-top: 4px solid var(--accent-blue);
-    transition: transform 0.3s ease;
-    background-color: #011117;
-  }
-  
-  .CategoryCard:hover {
-    transform: translateY(-5px);
-  }
-  
-  .CategoryTitle {
-    color: var(--primary-blue);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    background-color: #011117;
-  }
-  
-  .TechnologiesList {
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
-    background-color: #011117;
-  }
-  
-  .TechnologiesList li {
-    padding: 0.3rem 0;
-    color: #cfd8e8;
-    position: relative;
-    background-color: #011117;
-  }
-  
-  .TechnologiesList li:before {
-    content: "•";
-    color: var(--accent-blue);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
+.TechBox {
+  margin: 2rem 0;
+}
 
-  .TechnologiesCol {
-    background-color: #011117;
-  }
+.SectionTitle {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
 
-  .SectionEyebrow {
+.IntroText {
+  color: #cfd8e8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  background-color: #011117;
+}
+
+/* Category Cards */
+.CategoryCard {
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  height: 100%;
+  border-top: 4px solid var(--accent-blue);
+  transition: transform 0.3s ease;
+  background-color: #011117;
+}
+
+.CategoryCard:hover {
+  transform: translateY(-5px);
+}
+
+.CategoryTitle {
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  background-color: #011117;
+}
+
+.TechnologiesList {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  background-color: #011117;
+}
+
+.TechnologiesList li {
+  padding: 0.3rem 0;
+  color: #cfd8e8;
+  position: relative;
+  background-color: #011117;
+}
+
+.TechnologiesList li:before {
+  content: "•";
+  color: var(--accent-blue);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.TechnologiesCol {
+  background-color: #011117;
+}
+
+.SectionEyebrow {
   display: inline-block;
   font-size: 3rem;
   font-weight: 600;
@@ -85,7 +79,6 @@
 .ValuesSection {
   padding: 6rem 0;
   text-align: center;
- 
 }
 
 .ValuesGrid {
@@ -93,9 +86,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 4rem;
- 
 }
-
 
 .ValueCard {
   background: #011117;
@@ -104,7 +95,6 @@
   border: 1px solid #427fb7;
   transition: all 0.3s ease;
 }
-
 
 .ValueCard:hover {
   background: #134e6390;
@@ -133,19 +123,43 @@
   background: transparent;
 }
 
-
-
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .Container {
-      width: 95%;
-    }
-    
-    .TechnologiesCol {
-      margin-bottom: 1rem;
-    }
-    
-    .CategoryCard {
-      padding: 1rem;
-    }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .Container {
+    width: 95%;
   }
+  
+  .TechnologiesCol {
+    margin-bottom: 1rem;
+  }
+  
+  .CategoryCard {
+    padding: 1rem;
+  }
+  
+  /* NEW: Stack cards on mobile */
+  .ValuesGrid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem;
+  }
+  
+  .ValueCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .SectionEyebrow {
+    font-size: 2rem; /* Smaller on mobile */
+    letter-spacing: 0.1em;
+  }
+  
+  .ValuesSection {
+    padding: 3rem 0; /* Reduced padding on mobile */
+  }
+}
+
+/* Optional: Medium screens (tablets) */
+@media (max-width: 992px) and (min-width: 769px) {
+  .ValuesGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
