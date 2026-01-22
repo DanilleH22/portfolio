@@ -15,7 +15,12 @@ import Hero from './pages/Hero';
 function App() {
   return (
     <>
+     <Container fluid="md"
+    className='App'
+    style={{ width: '100%', overflow: 'hidden'}}
+    >
     <NavBar /> 
+    </Container>
       <Hero />
     <Container fluid="md"
     className='App'
