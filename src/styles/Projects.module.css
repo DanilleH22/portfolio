@@ -107,8 +107,10 @@
 
 .cardContent a {
   background-color: #011117 !important;
+  color:  #e5eaf2;
 }
-.cardContent, ProjectBack,  {
+
+.BackCard div  {
   background-color: #011117 !important;
 }
 
