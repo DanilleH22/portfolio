@@ -1,25 +1,25 @@
 /* Job Name Styling */
 .JobName {
-  border-left: 2px solid #2D3748;;
-  background-color: #88B4E6;
+  border-left: 2px solid #495770;;
+  background-color: #011117;
   transition: background-color 0.3s ease;
   padding: 0.8rem 1rem;
   margin: 0;
   font-size: 1rem;
   transition: all 0.3s ease;
   cursor: pointer;
-  color: #4A5568;
+  color: #cfd8e8;
 }
 
 /* Hover Effect for Job Name */
 .JobName:hover {
-  background-color:  #51607a;;
+  background-color:  #0d3a4a;;
   cursor: pointer;
 }
 
 /* Active Job State */
 .active {
-  background-color: #51607a;
+  background-color: #062936;
   font-weight: bold;
   color: white;
 }
@@ -31,15 +31,15 @@
   width: 100%;
   height: 350px;
   justify-content: space-evenly;
-  background-color: #88B4E6;
+  background-color: #011117;
 }
 
 /* Tab Content Styling */
 .TabContent {
   margin-top: 10px;
   text-align: left;
-  color: #B8C6D9;
-  background-color: #88B4E6;
+  color: #cfd8e8;
+  background-color: #011117;
 }
 
 /* Left Column - Job List */
@@ -50,16 +50,16 @@
   justify-content: flex-start; 
   gap: 10px; 
   height: 350px;
-  background-color: #88B4E6; 
+  background-color: #011117; 
 }
 
 h5, ul, strong, .CustomPane, .customRow {
-  background-color: #88B4E6;
+  background-color: #011117;
 }
 
 li{
-  color: #4A5568;
-  background-color: #88B4E6;
+  color: #cfd8e8;
+  background-color: #011117;
 }
 
 /* Right Column - Job Description */
@@ -70,7 +70,7 @@ li{
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
-  background-color: #88B4E6;
+  background-color: #011117;
 }
 
 /* Parent Row Styling */
@@ -81,10 +81,10 @@ li{
   align-items: flex-start; 
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 10px #427fb8;
+   border: 1px solid #427fb7;
   gap: 20px; 
-  height: 450px;
-  background-color: #88B4E6;
+  height: 550px;
+  background-color: #011117;
 }
 
 /* Tab Container Styling (For Smaller Screens) */
@@ -93,7 +93,7 @@ li{
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  background-color: #88B4E6;
+  background-color: #011117;
 }
 
 .TabContainer .nav-tabs {
@@ -106,7 +106,7 @@ li{
   margin-top: 20px;
   font-size: 14px;
   padding: 10px; 
-  background-color: #88B4E6;
+  background-color: #011117;
 }
 
 
@@ -142,6 +142,7 @@ li{
     font-size: 14px;
     padding-left: 5px;
     margin-bottom: 8px;
+    margin-top: 5px;
   }
 
   /* Adjust font size of description */
