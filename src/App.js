@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import Technologies from './pages/Technologies';
 import { Container } from 'react-bootstrap';
@@ -28,7 +27,7 @@ function App() {
     >
       
       <About2 />
-        {/* <AboutMe /> */}
+
         <Technologies />
         <Projects />
         <Experience />
