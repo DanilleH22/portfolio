@@ -105,6 +105,13 @@
   letter-spacing: 0.05em;
 }
 
+.cardContent a {
+  background-color: #011117 !important;
+}
+.cardContent, ProjectBack,  {
+  background-color: #011117 !important;
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
