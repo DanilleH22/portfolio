@@ -1,7 +1,13 @@
 import React, {useState} from 'react';
 import { motion } from 'framer-motion';
 import "../styles/about.css";
-
+import me1 from '../assets/me1.JPG';
+import me2 from '../assets/me2.JPG';
+import me3 from '../assets/me3.jpeg';
+import me4 from '../assets/me4.jpeg';
+import me5 from '../assets/me5.JPG';
+import me6 from '../assets/me6.jpeg';
+import me7 from '../assets/me7.jpeg';
 
 
 
@@ -114,7 +120,6 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
         >
-        
           <div className="story-grid">
             <motion.div 
               className="story-image-container"
@@ -122,13 +127,16 @@ const About = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="image-placeholder story-image">
-                <div className="image-overlay"></div>
+              <img src={me6} alt="Me" className="badge-image" />
+            
+                
+                
                 <div className="image-badge">
+                  
                   <span className="badge-dot">◉</span>
-                  <span>SINCE 2024</span>
+                  <span>SINCE 2023</span>
                 </div>
-              </div>
+            
             </motion.div>
             
             <motion.div className="story-content" variants={itemVariants}>
@@ -160,13 +168,10 @@ const About = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="image-placeholder mission-image">
-                <div className="image-overlay"></div>
-                <div className="image-quote">
-                  "Storytelling is the most powerful way to put ideas into the world today."
-                  <span className="quote-author">— Robert McKee</span>
-                </div>
-              </div>
+               <img src={me4} alt="Me" className="badge-image" />
+             
+               
+              
             </motion.div>
           </div>
         </motion.section>
