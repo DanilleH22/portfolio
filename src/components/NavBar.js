@@ -24,9 +24,10 @@ const NavBar = () => {
       <Col style={{ fontSize: '20px' }}>
     <div className={styles.Resume}>
       <a href={danilleCv} download="danilleCv" target='_blank' rel="noreferrer">
-      <button><b>Resume</b></button></a>
+      <button><b>Full Resume</b></button></a>
     </div>
     </Col>
+
     
     </Row>
     </ScrollAnimation>
