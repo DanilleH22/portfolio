@@ -10,6 +10,7 @@ import Experience from './pages/Experience';
 import styles from "../src/styles/Portfolio.module.css"
 import About2 from './pages/AboutMe2';
 import Hero from './pages/Hero';
+import FreelanceProcess from './pages/FreelanceProcess';
 
 function App() {
   return (
@@ -25,13 +26,14 @@ function App() {
     className='App'
     style={{ width: '100%', overflow: 'hidden'}}
     >
-      
-      <About2 />
-
+      <Projects />
+      <FreelanceProcess/>
         <Technologies />
-        <Projects />
+        <About2 />
         <Experience />
         <ContactMe />
+
+
 
     </Container>
     </>
