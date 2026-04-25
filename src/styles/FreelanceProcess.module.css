@@ -1,0 +1,115 @@
+/* Freelance Process Section */
+.freelanceProcess {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  margin: 3rem 0;
+}
+
+.freelanceProcess h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1a1a2e;
+  position: relative;
+  display: inline-block;
+}
+
+.freelanceProcess h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #4a90e2;
+  border-radius: 2px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.step span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: #4a90e2;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+.step p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.ctaButton {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.ctaButton:hover {
+  background: #357abd;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .freelanceProcess {
+    padding: 2rem 1rem;
+  }
+  
+  .freelanceProcess h2 {
+    font-size: 1.8rem;
+  }
+  
+  .step {
+    min-width: 100%;
+  }
+  
+  .ctaButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
