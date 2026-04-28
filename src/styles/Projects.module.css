@@ -15,8 +15,8 @@
 .projectCard {
     padding: 20px; 
     position: relative;
-    width: 300px; 
-    height: auto; 
+        width: 35vw;
+    height: 70vh;
     border-radius: 10px;
    border: 1px solid #427fb7;
   background-color: #011117;
@@ -36,12 +36,12 @@
 
 /* Project cards */
 .BackCard, .FrontCard{
-    height: 275px;
+    height: 65vh;
     display: grid;
   align-items: center;
   justify-content: center;
   background-color: #011117;
-
+  width: 32vw;
 }
 
  p, h3, strong {
@@ -129,3 +129,291 @@
       padding: 1rem;
     }
   }
+
+  /* Add these to your existing Projects.module.css */
+
+/* Back card freelance-specific styles */
+.backContent {
+  padding: 10px;
+  background-color: #011117;
+  color: #e5eaf2;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.problemSection, 
+.descriptionSection, 
+.resultsSection, 
+.timelineSection, 
+.roleSection, 
+.techSection, 
+.linksSection {
+  margin-bottom: 12px;
+  text-align: left;
+  background-color: #011117;
+}
+
+.problemSection strong,
+.descriptionSection strong,
+.resultsSection strong,
+.timelineSection strong,
+.roleSection strong,
+.techSection strong,
+.linksSection strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #4ecdc4;
+  margin-bottom: 4px;
+  background-color: #011117;
+}
+
+.problemSection p,
+.descriptionSection p,
+.resultsSection p {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #e5eaf2;
+  background-color: #011117;
+}
+
+.timelineSection span {
+  font-size: 0.75rem;
+  color: #ffd700;
+  background-color: #011117;
+}
+
+.problemIcon,
+.resultsIcon,
+.timelineIcon {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 0.8rem;
+  color: #4ecdc4;
+  background-color: #011117;
+}
+
+/* Tech tags */
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+  background-color: #011117;
+}
+
+.techTag {
+  background-color: rgba(78, 205, 196, 0.1);
+  border: 1px solid #4ecdc4;
+  color: #4ecdc4;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  display: inline-block;
+}
+
+/* Links section */
+.linksSection {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #4ecdc4;
+  color: #011117;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.projectLink:hover {
+  background-color: #45b7d1;
+  transform: translateY(-2px);
+}
+
+/* Make back card scrollable if content overflows */
+.BackCard {
+  height: 65vh;
+  overflow-y: auto;
+  background-color: #011117;
+}
+
+/* Custom scrollbar */
+.BackCard::-webkit-scrollbar {
+  width: 4px;
+}
+
+.BackCard::-webkit-scrollbar-track {
+  background: #011117;
+}
+
+.BackCard::-webkit-scrollbar-thumb {
+  background: #4ecdc4;
+  border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .techTag {
+    font-size: 0.6rem;
+    padding: 2px 4px;
+  }
+  
+  .problemSection p,
+  .descriptionSection p,
+  .resultsSection p {
+    font-size: 0.7rem;
+  }
+}
+
+
+/* Section dividers */
+.sectionDivider {
+  margin: 3rem 0 2rem 0;
+}
+
+.sectionTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.sectionIcon {
+  font-size: 2rem;
+  color: #4ecdc4;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #4ecdc4, transparent);
+}
+
+.sectionSubtitle {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 45px;
+  background: transparent;
+}
+
+/* Client card styling */
+.clientCard {
+  border: 2px solid #4ecdc4 !important;
+  position: relative;
+  overflow: visible;
+}
+
+.clientBadge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  color: #011117;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 10px rgba(78, 205, 196, 0.3);
+}
+
+/* Course card styling */
+.courseCard {
+      border: 2px solid #4eabcd !important;
+  opacity: 0.9;
+}
+
+.courseBadge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #4eabcd;
+  backdrop-filter: blur(10px);
+  color: #000001;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Learning section for course projects */
+.learningSection {
+  margin-bottom: 12px;
+  text-align: left;
+  background-color: #011117;
+}
+
+.learningSection strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #ffd700;
+  margin-bottom: 4px;
+  background-color: #011117;
+}
+
+.learningSection p {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #e5eaf2;
+  background-color: #011117;
+}
+
+/* Hover effects */
+.clientCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(78, 205, 196, 0.2);
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .sectionIcon {
+    font-size: 1.5rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 0.8rem;
+    margin-left: 35px;
+  }
+  
+  .clientBadge, .courseBadge {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+}
+
+svg {
+  background: transparent;
+}
