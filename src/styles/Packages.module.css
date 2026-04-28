@@ -1,0 +1,521 @@
+/* Packages.module.css */
+.packagesContainer {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+  min-height: 100vh;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionEyebrow {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Packages Grid */
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.packageCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.packageCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--package-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.recommended {
+  border: 2px solid #ffd700;
+  transform: scale(1.02);
+}
+
+.recommended:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+.recommendedBadge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #ffd700;
+  color: #1a1a2e;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Package Header */
+.packageHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.packageIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.packageName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.packagePrice {
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--package-color);
+  background: transparent;
+}
+
+.priceDetail {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+
+.packageFor {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+
+.packageTimeline {
+  font-size: 0.85rem;
+  color: #4ecdc4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+}
+
+/* Features */
+.packageFeatures {
+  margin: 2rem 0;
+  background: transparent;
+}
+
+.featuresList {
+  margin-bottom: 1.5rem;
+  background: transparent;
+}
+
+.featuresList strong {
+  display: block;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+}
+
+.checkIcon {
+  color: #4ecdc4;
+  font-size: 0.8rem;
+  min-width: 16px;
+}
+
+.notIncluded {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+
+.notIncluded strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+
+.notIncludedItem {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 5px;
+  background: transparent;
+}
+
+/* CTA Button */
+.ctaButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add-ons Section */
+.addonsSection {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: rgba(78, 205, 196, 0.05);
+  border-radius: 20px;
+}
+
+.addonsTitle {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #4ecdc4;
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+
+.addonsSubtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.addonsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  background: transparent;
+}
+
+.addonCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.addonCard:hover {
+  background: rgba(78, 205, 196, 0.1);
+  transform: translateX(5px);
+}
+
+.addonIcon {
+  font-size: 1.5rem;
+  color: #4ecdc4;
+  background: transparent;
+}
+
+.addonInfo {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+.addonInfo h4 {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  background: transparent;
+}
+
+.addonPrice {
+  font-weight: 600;
+  color: #ffd700;
+  background: transparent;
+}
+
+/* Process Section */
+.processSection {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.processTitle {
+  font-size: 2.3rem;
+  color: #4ecdc4;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  background: transparent;
+}
+
+.processStep {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  
+}
+
+.processStep:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stepNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.stepIcon {
+  font-size: 2rem;
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.processStep h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+
+.processStep p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+
+/* FAQ Section */
+.faqSection {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.faqSection h3 {
+  color: #4ecdc4;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.faqGrid {
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.faqItem {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.faqItem strong {
+  display: block;
+  color: #4ecdc4;
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+
+.faqItem p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+  background: transparent;
+}
+
+/* Final CTA */
+.finalCTA {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.05));
+  border-radius: 20px;
+  margin-top: 3rem;
+}
+
+.finalCTA h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.finalCTA p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.bookCallBtn {
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #1a1a2e;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bookCallBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+}
+
+/* Modal Styles */
+.quoteModal :global(.modal-content) {
+  background: #1a1a2e;
+  border: 1px solid #4ecdc4;
+  border-radius: 15px;
+}
+
+.modalHeader {
+  border-bottom-color: rgba(78, 205, 196, 0.3);
+  color: white;
+}
+
+.modalHeader :global(.btn-close) {
+  filter: invert(1);
+}
+
+.modalBody {
+  padding: 2rem;
+}
+
+.modalInput,
+.modalTextarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.modalInput:focus,
+.modalTextarea:focus {
+  outline: none;
+  border-color: #4ecdc4;
+}
+
+.modalTextarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  border: none;
+  border-radius: 8px;
+  color: #1a1a2e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .packagesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .recommended {
+    transform: scale(1);
+  }
+  
+  .recommended:hover {
+    transform: scale(1.02) translateY(-10px);
+  }
+  
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .addonsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .finalCTA h3 {
+    font-size: 1.2rem;
+  }
+}
