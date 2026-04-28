@@ -10,7 +10,8 @@ import Experience from './pages/Experience';
 import styles from "../src/styles/Portfolio.module.css"
 import About2 from './pages/AboutMe2';
 import FreelanceProcess from './pages/FreelanceProcess';
-import HeroAnimated from './pages/HeroAnimated'
+import HeroAnimated from './pages/HeroAnimated';
+import Packages from './pages/Packages';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
     style={{ width: '100%', overflow: 'hidden'}}
     >
       <Projects />
-      <FreelanceProcess/>
+      <Packages />
+      {/* <FreelanceProcess/> */}
         <Technologies />
         <About2 />
         <Experience />
