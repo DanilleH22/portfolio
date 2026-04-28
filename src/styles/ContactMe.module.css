@@ -6,10 +6,10 @@
     margin-bottom: 30px;
     border-radius: 10px;
     border: 1px solid #427fb7;
-    background-color: #011117;
+    /* background: #011117; */
 } 
 .Row {
-  background-color: #011117;
+  /* background: #011117; */
   padding-bottom: 5px;
 }
 /* Buttons for contact */
@@ -18,15 +18,15 @@
     width: auto;
     font-size: 20px; 
     border: 2px solid #333; 
-    background-color: #011117;
+    /* background-color: #011117; */
     color: #cfd8e8;
   }
   p  {
-    background-color: #011117;
+    background-color: #transparent;
     color: #cfd8e8;
   }
   .customCol, h1, strong {
-    background-color: #011117;
+    /* background: #011117; */
   }
 
   
@@ -49,3 +49,158 @@
     }
   }
   
+
+  /* Add these to your existing ContactMe.module.css */
+
+/* Consultation Button */
+.consultationButton {
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  color: #011117;
+}
+
+.consultationButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+  background: linear-gradient(135deg, #45b7d1, #4ecdc4);
+}
+
+.consultationNote {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  background: transparent;
+}
+
+.ConsultationRow {
+ /* background: #011117; */
+ margin-top: 20px;
+ 
+ 
+}
+
+/* Form Container */
+.formContainer {
+  /* background: #011117; */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formTitle {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: transparent;
+}
+
+.formSubtitle {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+/* Form Inputs */
+.formInput {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 8px;
+}
+
+.formInput:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #4ecdc4;
+  color: white;
+  box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Labels */
+.formContainer label {
+  color: #4ecdc4;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Form Buttons */
+.formButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.cancelButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  border: none;
+  padding: 8px 25px;
+  border-radius: 8px;
+  color: #011117;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .formTitle {
+    font-size: 1.2rem;
+  }
+  
+  .formButtons {
+    flex-direction: column;
+  }
+  
+  .cancelButton, .submitButton {
+    width: 100%;
+  }
+}
