@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 350px;
+  height: auto;
   justify-content: space-evenly;
   background-color: #011117;
 }
@@ -162,5 +162,190 @@ li{
     font-size: 20px;
     position: absolute;
   right: 18%;
+  }
+}
+
+
+/* Freelance Summary Stats */
+.freelanceSummary {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 20px 0 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.05));
+  border-radius: 15px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  flex-wrap: wrap;
+}
+
+.summaryItem, span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4ecdc4;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: transparent;
+}
+
+.summaryIcon {
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+/* Freelance job styling */
+.freelanceJob {
+  border-left: 3px solid #4ecdc4 !important;
+  background: linear-gradient(90deg, rgba(78, 205, 196, 0.1), transparent);
+}
+
+.freelanceBadge {
+  display: inline-block;
+  background: #4ecdc4;
+  color: #011117;
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.navIcon {
+  margin-right: 8px;
+  font-size: 0.8rem;
+  color: #4ecdc4;
+}
+
+/* Role header with project link */
+.roleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+.roleHeader h5 {
+  margin: 0;
+  color: #4ecdc4;
+}
+
+.projectLink {
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  color: #011117;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.projectLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+  color: #011117;
+}
+
+/* Date styling */
+.date {
+  color: #ffd700;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+/* Tech stack for freelance work */
+.techStack {
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(78, 205, 196, 0.05);
+  border-radius: 10px;
+  background: transparent;
+}
+
+.techStack strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #4ecdc4;
+  font-size: 0.85rem;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: transparent;
+}
+
+.techTag {
+  background: rgba(78, 205, 196, 0.15);
+  border: 1px solid #4ecdc4;
+  color: #4ecdc4;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+}
+
+/* Result highlight */
+.resultHighlight  {
+  background: rgba(255, 215, 0, 0.1);
+  border-left: 3px solid #ffd700;
+  padding: 8px 12px;
+  margin: 15px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.resultIconStrong{
+  background: transparent;
+}
+
+.resultIcon {
+  color: #ffd700;
+}
+
+.resultHighlight strong {
+  color: #ffd700;
+  font-size: 0.85rem;
+}
+
+/* Job header */
+.JobHeader, .strongHeader {
+  font-size: 3rem;
+  color: #4ecdc4;
+  margin-bottom: 10px;
+  background: transparent
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .freelanceSummary {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .roleHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .JobHeader {
+    font-size: 1.5rem;
+  }
+  
+  .techTags {
+    gap: 5px;
+  }
+  
+  .techTag {
+    font-size: 0.6rem;
+    padding: 2px 6px;
   }
 }
