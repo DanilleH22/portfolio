@@ -9,8 +9,8 @@ import ContactMe from './pages/ContactMe';
 import Experience from './pages/Experience';
 import styles from "../src/styles/Portfolio.module.css"
 import About2 from './pages/AboutMe2';
-import Hero from './pages/Hero';
 import FreelanceProcess from './pages/FreelanceProcess';
+import HeroAnimated from './pages/HeroAnimated'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
     >
     <NavBar /> 
     </Container>
-      <Hero />
+      <HeroAnimated />
     <Container fluid="md"
     className='App'
     style={{ width: '100%', overflow: 'hidden'}}
