@@ -277,7 +277,7 @@ ${formData.name || 'Not provided'}
             <div className={styles.addonsSection}>
               <h3 className={styles.addonsTitle}>Alternative Services</h3>
               <p className={styles.addonsSubtitle}>You may not need a custom website, we have custom templates available to choose from. Click the link below to view: </p>
-              <div className={styles.addonsGrid}>
+              <div className={styles.addonsGridBtn}>
                 <Button 
                 className={styles.bookCallBtn}
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
