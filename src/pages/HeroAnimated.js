@@ -8,12 +8,31 @@ function HeroAnimated() {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+    const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setExpanded(false); 
+    }
+  };
   
   const phrases = [
     'freelance developer',
     'React expert',
     'problem solver',
-    'your tech partner'
+    'tech partner'
   ];
   
   useEffect(() => {
@@ -75,10 +94,10 @@ function HeroAnimated() {
             </p>
             
             <div className={styles.buttonGroup}>
-              <Button className={styles.primaryBtnAnimated}>
+              <Button className={styles.primaryBtnAnimated} onClick={() => scrollToSection('projects')}>
                 View Projects <ArrowRight className={styles.btnIcon} /> 
               </Button>
-              <Button variant="outline-light" className={styles.secondaryBtnAnimated}>
+              <Button variant="outline-light" className={styles.secondaryBtnAnimated} onClick={() => scrollToSection('contact')}>
                 Let's Talk
               </Button>
             </div>
