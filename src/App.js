@@ -27,13 +27,31 @@ function App() {
     className='App'
     style={{ width: '100%', overflow: 'hidden'}}
     >
-      <Projects />
-      <Packages />
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="packages">
+        <Packages />
+      </section>
+
       {/* <FreelanceProcess/> */}
+
+      <section id="technologies">
         <Technologies />
+      </section>
+
+      <section id="about">
         <About2 />
+      </section>
+
+      <section id="experience">
         <Experience />
+      </section>
+
+      <section id="contact">
         <ContactMe />
+      </section>
 
 
 
