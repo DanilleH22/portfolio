@@ -61,8 +61,9 @@ Project Details:
 ${formData.details || 'No details provided'}
 
 ---
-This consultation request came from your portfolio website.
-Please respond within 24 hours.
+Kind Regards,
+Name: ${formData.name || 'Not provided'}
+
     `;
     
     // Open email with pre-filled template
