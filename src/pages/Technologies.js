@@ -4,10 +4,10 @@ import styles from '../styles/Technologies.module.css';
 import Row from 'react-bootstrap/Row';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { motion } from 'framer-motion';
+import { Circle, Star } from 'react-bootstrap-icons';
 
 function Technologies() {
 
-// Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,103 +27,153 @@ function Technologies() {
     }
   };
 
+  // NEW: Skill levels for client confidence
+  const getSkillBadge = (level) => {
+    if (level === 'expert') return <span className={styles.expertBadge}><Star /> Expert</span>;
+    if (level === 'advanced') return <span className={styles.advancedBadge}>Advanced</span>;
+    return null;
+  };
+
   return (
     <Container className={styles.Container}>
       <ScrollAnimation animationVariants={{
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1 } }
-  }}>
+        hidden: { opacity: 0, x: -100 },
+        visible: { opacity: 1, x: 0, transition: { duration: 1 } }
+      }}>
         <Row className={styles.TechBox}>
           
-          {/* <h2 className={styles.SectionTitle}>Technologies & Tools</h2>
-          <p className={styles.IntroText}>
-            Throughout my journey as a software developer, I've worked with a diverse range of technologies:
-          </p> */}
-
-        
-         {/* Values Section */}
-        <motion.section 
-          className={styles.ValuesSection}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-        >
-          <motion.div className="section-header" variants={itemVariants}>
-            <h2 className={styles.SectionEyebrow}>TECHNOLOGIES</h2>
-           
-          </motion.div>
-       
-     
-        
-          
-          <div className={styles.ValuesGrid}>
-            {[
-              { icon: '👩‍💻', title: 'Languages', description: 'HTML, CSS, Python, JavaScript, SQL' },
-              { icon: '💻', title: 'Frameworks', description: 'React, Bootstrap, Django, Flask, Node.js, TypeScript' },
-              { icon: '🖥️', title: 'APIs & Tools', description: 'Git, RESTful APIs' },
-              { icon: '🔰', title: 'Environments', description: 'GitHub, Xcode, VS Code' },
-              { icon: '📈', title: 'Data Analytics', description: 'Power BI, SQL Server Management Studio (SSMS), Excel' },
-              { icon: '📊', title: 'Visualisation and Reporting', description: 'Power BI, Excel' }
-            ].map((value, index) => (
+          {/* Updated header for freelancing */}
+          <motion.section 
+            className={styles.ValuesSection}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
+            <motion.div className="section-header" variants={itemVariants}>
+              <span className={styles.SectionEyebrow}>TECHNOLOGIES & TOOLS</span>
+              <h2 className={styles.SectionTitle}>What I Can Build For You</h2>
+              <p className={styles.SectionSubtitle}>
+                I use modern, industry-standard technologies to build fast, responsive, and scalable websites.
+                Here's what I specialize in:
+              </p>
+            </motion.div>
+         
+            <div className={styles.ValuesGrid}>
+              {/* Frontend Development - Most important for freelancing */}
               <motion.div 
-                key={index}
                 className={styles.ValueCard}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.05 }}
-                transition={{ duration: 0.3 }}
               >
-                <div className={styles.ValueIcon}>{value.icon}</div>
-                <h3 className={styles.ValueTitle}>{value.title}</h3>
-                <p className={styles.ValueDescription}>{value.description}</p>
+                <div className={styles.ValueIcon}>🎨</div>
+                <h3 className={styles.ValueTitle}>Frontend Development</h3>
+                <p className={styles.ValueDescription}>React, HTML5, CSS3, JavaScript, Bootstrap, Webflow</p>
+                <div className={styles.skillLevel}>
+                  <div className={styles.progressBar}>
+                    <div className={styles.progress} style={{ width: '90%' }}></div>
+                  </div>
+                  <span className={styles.levelText}>Advanced</span>
+                </div>
+                <p className={styles.whatCanBuild}>✓ Responsive websites that work on all devices</p>
               </motion.div>
-            ))}
-          </div>
-        </motion.section>
 
-          
-
-        </Row>
-
-       
-
-
-        {/* Values Section
-        <motion.section 
-          className="values-section"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-        >
-          <motion.div className="section-header" variants={itemVariants}>
-            <span className="section-eyebrow">CORE PRINCIPLES</span>
-            <h2 className="section-title">My Values</h2>
-          </motion.div>
-          
-          <div className="values-grid">
-            {[
-              { icon: '🎯', title: 'Authenticity', description: 'Human-centered storytelling that connects' },
-              { icon: '✨', title: 'Craftsmanship', description: 'Precision in every frame and edit' },
-              { icon: '🤝', title: 'Collaboration', description: 'Partnerships built on trust' },
-              { icon: '🚀', title: 'Innovation', description: 'Pushing creative boundaries forward' },
-              { icon: '❤️', title: 'Passion', description: 'Love for the art of storytelling' },
-              { icon: '⚡', title: 'Impact', description: 'Creating work that moves people' }
-            ].map((value, index) => (
+              {/* Backend Development */}
               <motion.div 
-                key={index}
-                className="value-card"
+                className={styles.ValueCard}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.05 }}
-                transition={{ duration: 0.3 }}
               >
-                <div className="value-icon">{value.icon}</div>
-                <h3 className="value-title">{value.title}</h3>
-                <p className="value-description">{value.description}</p>
+                <div className={styles.ValueIcon}>⚙️</div>
+                <h3 className={styles.ValueTitle}>Backend Development</h3>
+                <p className={styles.ValueDescription}>Python, Django, Node.js, PostgreSQL, REST APIs</p>
+                <div className={styles.skillLevel}>
+                  <div className={styles.progressBar}>
+                    <div className={styles.progress} style={{ width: '75%' }}></div>
+                  </div>
+                  <span className={styles.levelText}>Intermediate-Advanced</span>
+                </div>
+                <p className={styles.whatCanBuild}>✓ Custom web applications with databases</p>
               </motion.div>
-            ))}
-          </div>
-        </motion.section> */}
+
+              {/* Full Stack - What clients really want to hear */}
+              <motion.div 
+                className={`${styles.ValueCard} ${styles.featuredCard}`}
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.05 }}
+              >
+                <div className={styles.ValueIcon}>🚀</div>
+                <h3 className={styles.ValueTitle}>Full Stack Development</h3>
+                <p className={styles.ValueDescription}>Combined frontend + backend expertise</p>
+                <div className={styles.featuredBadge}>
+                  <Circle /> Most Requested
+                </div>
+                <p className={styles.whatCanBuild}>✓ Complete websites from scratch to deployment</p>
+              </motion.div>
+
+              {/* Tools & Version Control */}
+              <motion.div 
+                className={styles.ValueCard}
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.05 }}
+              >
+                <div className={styles.ValueIcon}>🛠️</div>
+                <h3 className={styles.ValueTitle}>Development Tools</h3>
+                <p className={styles.ValueDescription}>Git, GitHub, VS Code, Xcode</p>
+                <div className={styles.skillLevel}>
+                  <div className={styles.progressBar}>
+                    <div className={styles.progress} style={{ width: '85%' }}></div>
+                  </div>
+                  <span className={styles.levelText}>Advanced</span>
+                </div>
+                <p className={styles.whatCanBuild}>✓ Version control and collaborative development</p>
+              </motion.div>
+
+              {/* Data & Analytics - Keep but rephrase for clients */}
+              <motion.div 
+                className={styles.ValueCard}
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.05 }}
+              >
+                <div className={styles.ValueIcon}>📊</div>
+                <h3 className={styles.ValueTitle}>Data Analytics</h3>
+                <p className={styles.ValueDescription}>Power BI, SQL Server, Excel</p>
+                <p className={styles.whatCanBuild}>✓ Track website performance and user behavior</p>
+              </motion.div>
+
+              {/* NEW: Client-Specific Services */}
+              <motion.div 
+                className={styles.ValueCard}
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.05 }}
+              >
+                <div className={styles.ValueIcon}>💼</div>
+                <h3 className={styles.ValueTitle}>Client Services</h3>
+                <p className={styles.ValueDescription}>What I deliver for every project</p>
+                <ul className={styles.serviceList}>
+                  <li>✅ Responsive design (mobile-first)</li>
+                  <li>✅ SEO optimization</li>
+                  <li>✅ Performance optimization</li>
+                  <li>✅ Cross-browser testing</li>
+                  <li>✅ Post-launch support</li>
+                </ul>
+              </motion.div>
+            </div>
+
+            {/* NEW: Technology Guarantee */}
+            <motion.div className={styles.guaranteeSection} variants={itemVariants}>
+              <div className={styles.guaranteeBox}>
+                <Circle className={styles.guaranteeIcon} />
+                <div>
+                  <h4>100% Technology Guarantee</h4>
+                  <p>I use only modern, well-documented technologies that are easy to maintain and scale.</p>
+                  <small>Need something specific? I'm always learning new technologies based on client needs.</small>
+                </div>
+              </div>
+            </motion.div>
+
+          </motion.section>
+        </Row>
       </ScrollAnimation>
     </Container>
   );
