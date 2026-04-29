@@ -1,8 +1,9 @@
 // src/components/Packages.jsx
-import React, { useState } from 'react';
-import { Container, Row, Col, Button, Modal } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Button, Modal, Form } from 'react-bootstrap';
 import { Check, Star, Rocket, Crown, Clock, ChartLine, Code, Mobile, Database, MineCart, Envelope, CalendarAlt } from 'react-bootstrap-icons';
 import styles from '../styles/Packages.module.css';
+import styles2 from '../styles/ContactMe.module.css';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { motion } from 'framer-motion';
 
@@ -13,6 +14,78 @@ const Packages = () => {
   const handleShowModal = (pkg) => {
     setSelectedPackage(pkg);
     setShowModal(true);
+  };
+
+    const [isLoading, setLoading] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    projectType: '',
+    budget: '',
+    timeline: '',
+    details: ''
+  });
+
+  useEffect(() => {
+    function simulateNetworkRequest() {
+      return new Promise((resolve) => setTimeout(resolve, 2000));
+    }
+
+    if (isLoading) {
+      simulateNetworkRequest().then(() => {
+        setLoading(false);
+      });
+    }
+  }, [isLoading]);
+
+  const handleClick = () => setLoading(true);
+
+  const handleFormChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleConsultationSubmit = (e) => {
+    e.preventDefault();
+    
+    // Create email content with consultation details
+    const emailSubject = `Consultation Request - ${formData.projectType || 'New Project'}`;
+    const emailBody = `
+NEW CONSULTATION REQUEST
+
+Name: ${formData.name || 'Not provided'}
+
+Project Type: ${formData.projectType || 'Not specified'}
+
+Budget Range: ${formData.budget || 'Not specified'}
+
+Timeline: ${formData.timeline || 'Not specified'}
+
+Project Details:
+${formData.details || 'No details provided'}
+
+---
+Kind Regards,
+${formData.name || 'Not provided'}
+
+    `;
+    
+    // Open email with pre-filled template
+    window.location.href = `mailto:hamiltonkdanille@hotmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Reset form and hide it
+    setFormData({
+      name: '',
+      projectType: '',
+      budget: '',
+      timeline: '',
+      details: ''
+    });
+    setShowForm(false);
+    setLoading(true);
+    setTimeout(() => setLoading(false), 1000);
   };
 
   const packages = [
@@ -283,30 +356,132 @@ const Packages = () => {
               <p>Let's hop on a quick 15-min discovery call — no obligation, just honest advice.</p>
               <Button 
                 className={styles.bookCallBtn}
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => setShowForm(!showForm)}
+              
               >
                 <Envelope /> Book Free Consultation
               </Button>
             </div>
+
+            {/* NEW: Consultation Form (shows when button is clicked) */}
+        {showForm && (
+          <Row className={styles2.Row}>
+            <Col xs={12} md={8} lg={6} className="mx-auto">
+              <div className={styles2.formContainer}>
+                <h3 className={styles2.formTitle}>Quick Questions</h3>
+                <p className={styles2.formSubtitle}>Help me prepare for our call</p>
+                
+                <Form onSubmit={handleConsultationSubmit}>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Your Name *</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleFormChange}
+                      placeholder="e.g., John Smith"
+                      required
+                      className={styles2.formInput}
+                    />
+                  </Form.Group>
+
+                  <Form.Group className="mb-3">
+                    <Form.Label>What type of project? *</Form.Label>
+                    <Form.Select
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleFormChange}
+                      required
+                      className={styles2.formInput}
+                    >
+                      <option value="">Select one...</option>
+                      <option>Portfolio Website</option>
+                      <option>Business Website</option>
+                      <option>E-commerce Store</option>
+                      <option>Web Application</option>
+                      <option>Landing Page</option>
+                      <option>Website Redesign</option>
+                      <option>Other</option>
+                    </Form.Select>
+                  </Form.Group>
+
+                  <Form.Group className="mb-3">
+                    <Form.Label>Budget Range *</Form.Label>
+                    <Form.Select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleFormChange}
+                      required
+                      className={styles2.formInput}
+                    >
+                      <option value="">Select one...</option>
+                      <option>£0 - £300</option>
+                      <option>£300 - £600</option>
+                      <option>£600 - £1,000</option>
+                      <option>£1,000+</option>
+                      <option>Not sure / Need advice</option>
+                    </Form.Select>
+                  </Form.Group>
+
+                  <Form.Group className="mb-3">
+                    <Form.Label>Expected Timeline *</Form.Label>
+                    <Form.Select
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleFormChange}
+                      required
+                      className={styles2.formInput}
+                    >
+                      <option value="">Select one...</option>
+                      <option>ASAP (within 2 weeks)</option>
+                      <option>Within a month</option>
+                      <option>1-3 months</option>
+                      <option>3+ months</option>
+                      <option>Just exploring</option>
+                    </Form.Select>
+                  </Form.Group>
+
+                  <Form.Group className="mb-3">
+                    <Form.Label>Tell me about your project *</Form.Label>
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      name="details"
+                      value={formData.details}
+                      onChange={handleFormChange}
+                      placeholder="What are you looking to build? Any specific features or examples you like?"
+                      required
+                      className={styles2.formInput}
+                    />
+                  </Form.Group>
+
+                  <div className={styles2.formButtons}>
+                    <Button 
+                      variant="secondary" 
+                      onClick={() => setShowForm(false)}
+                      className={styles2.cancelButton}
+                    >
+                      Cancel
+                    </Button>
+                    <Button 
+                      variant="primary" 
+                      type="submit"
+                      className={styles2.submitButton}
+                    >
+                      Send Request →
+                    </Button>
+                  </div>
+                </Form>
+              </div>
+            </Col>
+          </Row>
+        )}
+
           </motion.div>
         </ScrollAnimation>
       </Container>
 
-      {/* Quote Request Modal */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} centered className={styles.quoteModal}>
-        <Modal.Header closeButton className={styles.modalHeader}>
-          <Modal.Title>Request a Quote for {selectedPackage?.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body className={styles.modalBody}>
-          <form>
-            <input type="text" placeholder="Your Name" className={styles.modalInput} />
-            <input type="email" placeholder="Your Email" className={styles.modalInput} />
-            <input type="tel" placeholder="Phone (optional)" className={styles.modalInput} />
-            <textarea placeholder="Tell me about your project..." rows="4" className={styles.modalTextarea}></textarea>
-            <button className={styles.submitBtn}>Send Request →</button>
-          </form>
-        </Modal.Body>
-      </Modal>
+      
     </>
   );
 };
