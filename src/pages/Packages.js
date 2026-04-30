@@ -1,7 +1,9 @@
 // src/components/Packages.jsx
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Modal, Form } from 'react-bootstrap';
-import { Check, Star, Rocket, Crown, Clock, ChartLine, Code, Mobile, Database, MineCart, Envelope, CalendarAlt } from 'react-bootstrap-icons';
+import { Check, Star, Rocket, Crown, PaintBucket, 
+            Trophy, Clock, ChartLine, Code, Window, Mobile, Database, MineCart, 
+            Envelope, CalendarAlt, CameraReels } from 'react-bootstrap-icons';
 import styles from '../styles/Packages.module.css';
 import styles2 from '../styles/ContactMe.module.css';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -90,21 +92,25 @@ ${formData.name || 'Not provided'}
 
   const packages = [
     {
-      name: "Essential",
+      name: "Get Found",
       icon: <Star />,
-      price: "£800",
+      price: "£750",
       priceDetail: "one-time",
+      priceNotice: "Or 50% deposit + 2 months payment. If this is still not suitable other payment plan options can be discussed.",
      最适合: "Small businesses, startups, portfolios",
-      timeline: "1-2 weeks",
+      timeline: "3 weeks",
       features: [
         "Up to 5 pages",
-        "Responsive design (mobile-friendly)",
+        "Responsive design (mobile and tablet friendly)",
+        "Basic Animation",
         "Contact form integration",
         "Basic SEO setup",
         "Social media links",
         "Google Analytics setup",
-        "1 round of revisions",
-        "30 days of basic support"
+        "Google Maps Embed",
+        "2 round of revisions",
+        "30 days of basic support after launching",
+        "1 Hour Training Session (Recorded)"
       ],
       notIncluded: [
         "E-commerce functionality",
@@ -115,43 +121,47 @@ ${formData.name || 'Not provided'}
       color: "#4ecdc4"
     },
     {
-      name: "Professional",
+      name: "Lead Machine",
       icon: <Rocket />,
-      price: "£1,800",
+      price: "£1,400",
       priceDetail: "one-time",
+      priceNotice: "Or 50% deposit + 2 months payment. If this is still not suitable other payment plan options can be discussed.",
      最适合: "Growing businesses, blogs, e-commerce",
-      timeline: "3-4 weeks",
+      timeline: "Up to 6 weeks",
       features: [
+        "Everything in Get Found",
         "Up to 10 pages",
-        "Responsive design (mobile-friendly)",
         "Advanced contact forms",
+        "Advanced animations",
         "Complete SEO optimization",
-        "Social media integration",
         "Google Analytics + Search Console",
-        "2 rounds of revisions",
+        "4 rounds of revisions",
         "90 days of priority support",
         "Blog/CMS integration",
         "Email marketing setup",
         "Performance optimization",
         "SSL certificate setup",
-        "E-Commerce Funcionability"
+        "E-Commerce Funcionability",
+        "2 Hour Training Session (Recorded)"
       ],
       notIncluded: [
         "Custom database architecture",
-        "Advanced animations"
+        "Monthly Maintanence"
+        
       ],
       recommended: true,
       color: "#ff6b6b"
     },
     {
-      name: "Enterprise",
-      icon: "Crown",
-    //   <Crown />,
-      price: "£3,500+",
+      name: "Complete Growth",
+      icon:  <Trophy />,
+      price: "£2,300",
       priceDetail: "custom quote",
+      priceNotice: "Or 50% deposit + 2 months payment. If this is still not suitable other payment plan options can be discussed.",
      最适合: "Large companies, complex web apps",
-      timeline: "6-8+ weeks",
+      timeline: "Up to 8+ weeks",
       features: [
+        "Everything in Lead Machine",
         "Unlimited pages",
         "Fully custom design",
         "Advanced database integration",
@@ -159,12 +169,13 @@ ${formData.name || 'Not provided'}
         "User authentication system",
         "Payment gateway integration",
         "Advanced animations",
-        "Unlimited revisions",
+        "Unlimited revisions (Until support time frame met)",
         "6 months priority support",
         "Performance optimization",
         "Security hardening",
         "CI/CD pipeline setup",
-        "6 Months maintenance"
+        "6 Months maintenance",
+        "4 Hour Training Session (Recorded)"
       ],
       notIncluded: [],
       recommended: false,
@@ -173,11 +184,13 @@ ${formData.name || 'Not provided'}
   ];
 
   const addOns = [
-    { name: "Additional Page", price: "£150", icon: <Code /> },
-    { name: "E-commerce Setup", price: "£500", icon: <i class="bi bi-minecart"></i> },
-    { name: "Custom Animations", price: "£300", icon: <Rocket /> },
-    { name: "Database Integration", price: "£400", icon: <Database /> },
-    { name: "Maintenance Package (monthly)", price: "£150/mo", icon: <Clock /> }
+    { name: "Additional Page (Beyond Package Limit)", price: "£750", icon: <Code /> },
+    { name: "Blog Set Up (First 3 posts by me)", price: "£250", icon: < Window /> },
+    { name: "Google Analytics Set Up", price: "£50", icon: <Database /> },
+    { name: "Custom Animations", price: "£200", icon: <Rocket /> },
+    { name: "Logo Design (Simple and Proffessional)", price: "£150", icon: <PaintBucket /> },
+    { name: "Maintenance Package (monthly)", price: "£150/mo", icon: <Clock /> },
+    { name: "Extra Training Session (1 hour)", price: "£50", icon: <CameraReels /> },
   ];
 
   const process = [
@@ -229,11 +242,13 @@ ${formData.name || 'Not provided'}
                       {pkg.icon}
                     </div>
                     <h3 className={styles.packageName}>{pkg.name}</h3>
+                    <p className={styles.packageFor}>🎯 {pkg.最适合}</p>
                     <div className={styles.packagePrice}>
                       <span className={styles.price}>{pkg.price}</span>
                       <span className={styles.priceDetail}>/{pkg.priceDetail}</span>
+                      <span className={styles.priceDetail}>/{pkg.priceNotice}</span>
                     </div>
-                    <p className={styles.packageFor}>🎯 {pkg.最适合}</p>
+                    
                     <p className={styles.packageTimeline}>
                       <Clock /> {pkg.timeline}
                     </p>
@@ -274,7 +289,7 @@ ${formData.name || 'Not provided'}
             </div>
 
             {/* Extra Services Section */}
-            <div className={styles.addonsSection}>
+            <div className={styles.addonsSectionBtn}>
               <h3 className={styles.addonsTitle}>Alternative Services</h3>
               <p className={styles.addonsSubtitle}>You may not need a custom website, we have custom templates available to choose from. Click the link below to view: </p>
               <div className={styles.addonsGridBtn}>
@@ -326,7 +341,7 @@ ${formData.name || 'Not provided'}
                 <Col md={6}>
                   <div className={styles.faqItem}>
                     <strong>❓ Do you offer payment plans?</strong>
-                    <p>Yes! 50% upfront, 50% upon completion. Enterprise clients can request custom payment schedules.</p>
+                    <p>Yes! 50% deposit + 2 months payment. If this is still not suitable other payment plan options can be discussed.</p>
                   </div>
                 </Col>
                 <Col md={6}>
