@@ -498,204 +498,189 @@ background: #134e6390;
     padding-right: 0;
   }
 }
-
+/* Responsive Adjustments - COMPLETE FIX */
 @media (max-width: 768px) {
-  .about-container {
+  .Container {
+    width: 95%;
     padding: 0 1rem;
   }
   
-  /* STORY SECTION - Mobile Fix */
-  .story-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  .TechnologiesCol {
+    margin-bottom: 1rem;
   }
   
-  /* Reorder items: Image 1, Content, Image 2 */
-  .story-image-container:first-child {
-    order: 1;
+  .CategoryCard {
+    padding: 1rem;
   }
   
-  .story-content {
-    order: 2;
+  /* FORCE STACKING ON MOBILE - This is the key fix */
+  .ValuesGrid {
+    display: grid;
+    grid-template-columns: 1fr !important; /* Force single column */
+    gap: 1.5rem;
+    margin-top: 2rem;
   }
   
-  .mission-image-container {
-    order: 3;
-  }
-  
-  /* Image containers */
-  .story-image-container,
-  .mission-image-container {
+  /* Ensure each card takes full width */
+  .ValueCard {
+    padding: 1.5rem;
     width: 100%;
-    max-width: 280px;
     margin: 0 auto;
-    aspect-ratio: 4/5;
   }
   
-  /* Fix image positioning */
-  .badge-image {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-  }
-  
-  .story-image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    background: #011117;
-  }
-  
-  /* Badge styling */
-  .image-badge {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    justify-content: center;
-  }
-  
-  /* Header sizes */
-  .mission-hero {
-    padding: 4rem 0 2rem;
-  }
-  
-  .mission-hero h1 {
-    font-size: 2rem;
-    margin: 0;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  /* Section spacing */
-  .story-section,
-  .mission-section,
-  .values-section {
-    padding: 3rem 0;
-  }
-  
-  /* Text sizes */
-  .story-tagline {
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
-  
-  .story-description {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .section-eyebrow {
-    font-size: 1.3rem;
+  /* Smaller text on mobile */
+  .SectionEyebrow {
+    font-size: 1.2rem !important;
     letter-spacing: 0.1em;
   }
   
-  .section-title {
-    font-size: 1.8rem;
+  .SectionTitle {
+    font-size: 1.8rem !important;
   }
   
-  /* Stats grid */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  /* Mission points */
-  .mission-point {
-    padding: 1rem;
-  }
-  
-  .point-header {
-    flex-wrap: wrap;
-  }
-  
-  .point-title {
-    font-size: 1.1rem;
-  }
-  
-  .point-description {
+  .SectionSubtitle {
     font-size: 0.85rem;
-    margin-left: 0;
+    padding: 0 0.5rem;
   }
   
-  /* Values grid */
-  .values-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .ValuesSection {
+    padding: 2rem 0;
   }
   
-  /* CTA buttons */
-  .cta-buttons {
+  /* Fix icon sizes */
+  .ValueIcon {
+    font-size: 2.5rem;
+  }
+  
+  .ValueTitle {
+    font-size: 1.2rem;
+  }
+  
+  .ValueDescription {
+    font-size: 0.85rem;
+  }
+  
+  /* Fix featured badge positioning on mobile */
+  .featuredCard {
+    position: relative;
+    overflow: visible;
+  }
+  
+  .featuredBadge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+  
+  /* Fix guarantee box on mobile */
+  .guaranteeSection {
+    margin-top: 2rem;
+    padding: 0;
+  }
+  
+  .guaranteeBox {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
   }
   
-  .cta-primary,
-  .cta-secondary {
-    width: 100%;
-    max-width: 280px;
+  .guaranteeIcon {
+    margin: 0 auto 10px auto;
   }
   
-  /* Contact CTA */
-  .contact-cta {
-    padding: 2rem 1rem;
-    margin: 3rem 0;
+  .guaranteeBox h4 {
+    font-size: 1rem;
   }
   
-  .cta-title {
-    font-size: 1.5rem;
+  .guaranteeBox p {
+    font-size: 0.85rem;
   }
   
-  .cta-description {
-    font-size: 0.9rem;
+  .guaranteeBox small {
+    font-size: 0.75rem;
+  }
+  
+  /* Fix service list on mobile */
+  .serviceList {
+    text-align: left;
+    padding-left: 1rem;
+  }
+  
+  .serviceList li {
+    font-size: 0.7rem;
+  }
+  
+  /* Fix skill level indicators */
+  .skillLevel {
+    margin: 10px 0;
+  }
+  
+  .levelText {
+    font-size: 0.65rem;
+  }
+  
+  /* Fix whatCanBuild text */
+  .whatCanBuild {
+    font-size: 0.7rem;
   }
 }
 
-/* Extra small devices */
-@media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
+/* Tablet screens (between 769px and 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+  .ValuesGrid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on tablets */
+    gap: 1.5rem;
   }
   
-  .story-image-container,
-  .mission-image-container {
-    max-width: 240px;
+  .SectionTitle {
+    font-size: 2rem;
   }
   
-  .section-eyebrow {
-    font-size: 1.1rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-  }
-  
-  .image-badge {
-    bottom: 0.5rem;
-    left: 0.5rem;
-    right: 0.5rem;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.6rem;
+  .ValueCard {
+    padding: 1.5rem;
   }
 }
+
+/* Extra small devices (phones under 480px) */
 @media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
+  .ValuesGrid {
+    gap: 1rem;
   }
   
-  .mission-point {
-    padding: 1rem;
+  .ValueCard {
+    padding: 1.25rem;
   }
   
-  .point-description {
-    margin-left: 0;
+  .SectionEyebrow {
+    font-size: 1rem !important;
+  }
+  
+  .SectionTitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .ValueIcon {
+    font-size: 2rem;
+  }
+  
+  .ValueTitle {
+    font-size: 1rem;
+  }
+  
+  .ValueDescription {
+    font-size: 0.75rem;
+  }
+  
+  .featuredBadge {
+    font-size: 0.5rem;
+    padding: 2px 6px;
+    top: -8px;
+    right: 8px;
+  }
+  
+  .serviceList li {
+    font-size: 0.65rem;
   }
 }
