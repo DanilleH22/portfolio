@@ -128,6 +128,16 @@
     .CategoryCard {
       padding: 1rem;
     }
+
+    .projectCard {
+
+        width: 75vw;
+    
+}
+.FrontCard, .BackCard {
+  width: 60vw
+}
+
   }
 
   /* Add these to your existing Projects.module.css */
