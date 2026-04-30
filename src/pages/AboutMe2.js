@@ -34,71 +34,11 @@ const About = () => {
     }
   };
 
-   const [buttonState, setButtonState] = useState('idle'); 
-  const [copied, setCopied] = useState(false);
-  
-  const whatsappPhone = "447769873047"; 
-  const whatsappMessage = "Hello LA4K,\n\nI'm interested in your media production services. Could you provide more information about:\n\n• Project type:\n• Timeline:\n• Budget range:\n\nLooking forward to hearing from you!";
 
 
-
- // Email fallback (optional)
-  const email = "Mrla4k@gmail.com";
-
-  const handleGetInTouch = () => {
-    setButtonState('loading');
-    
-    // Simulate network delay
-    setTimeout(() => {
-      // Check if user is on mobile for better UX
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      
-      if (isMobile) {
-        // For mobile: Try to open WhatsApp app directly
-        window.location.href = `whatsapp://send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`;
-        
-        // Fallback after 2 seconds if WhatsApp not installed
-        setTimeout(() => {
-          if (document.hidden) {
-            // WhatsApp opened successfully
-          } else {
-            // WhatsApp not installed, open web version
-            window.open(`https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-          }
-        }, 2000);
-      } else {
-        // For desktop: Open WhatsApp Web
-        window.open(`https://web.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-      }
-      
-      // Show success state briefly
-      setButtonState('success');
-      setTimeout(() => setButtonState('idle'), 2000);
-    }, 800);
-  };
 
   
 
-  const buttonConfig = {
-    idle: {
-      text: 'Get in Touch on WhatsApp',
-      className: 'primary'
-    },
-    loading: {
-      text: 'Opening WhatsApp...',
-      className: 'loading'
-    },
-    success: {
-      text: 'WhatsApp Ready!',
-      className: 'success'
-    },
-    error: {
-      text: 'Try Again',
-      className: 'error'
-    }
-  };
-
-  const currentButton = buttonConfig[buttonState];
 
 
 
@@ -113,34 +53,19 @@ const About = () => {
       
 
        {/* Our Story Section */}
-        <motion.section 
-          className="story-section"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-        >
-          <div className="story-grid">
-            <motion.div 
-              className="story-image-container"
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <img src={me6} alt="Me" className="badge-image" />
-            
-                
-                
-                <div className="image-badge">
-                  
-                  <span className="badge-dot">◉</span>
-                  <span>SINCE 2023</span>
-                </div>
-            
-            </motion.div>
-            
-            <motion.div className="story-content" variants={itemVariants}>
-              <div className="section-header">
+        <div className="story-grid">
+  {/* Image 1 - Left side */}
+  <motion.div className="story-image-container" variants={itemVariants}>
+    <img src={me6} alt="Me" className="badge-image" />
+    <div className="image-badge">
+      <span className="badge-dot">◉</span>
+      <span>SINCE 2023</span>
+    </div>
+  </motion.div>
+  
+  {/* Content - Middle */}
+  <motion.div className="story-content" variants={itemVariants}>
+    <div className="section-header">
                 <span className="section-eyebrow">WHO AM I</span>
                 <h2 className="section-title">About me</h2>
               </div>
@@ -153,42 +78,15 @@ const About = () => {
               <p className="story-description">
                 Alongside my analytics work, I’m a full-stack developer with hands-on experience building data-driven web applications using React, Django, APIs, and PostgreSQL. This allows me to take ideas from concept through to production, whether that’s an internal operations tool, a client-facing platform, or a product that needs both strong logic and a thoughtful user experience.
               </p>
-               {/* <p className="story-description">
-                What ties everything together is my background in psychology. It shapes how I think about systems, users, and edge cases — and how I design solutions that people actually trust and adopt. I’m especially interested in work that blends analytics, automation, and product thinking to create leverage for teams and clarity from complexity.
-               </p>
-               <p className="story-description">
-                I’m open to opportunities across Senior Data / BI roles, automation-focused positions, and full-stack projects, and I also work with clients who need practical, data-led systems built with care and intention.
-            </p> */}
-            </motion.div>
-            
+  </motion.div>
+  
+  {/* Image 2 - Right side */}
+  <motion.div className="mission-image-container" variants={itemVariants}>
+    <img src={me4} alt="Me" className="badge-image" />
+  </motion.div>
+</div>
 
-             <motion.div 
-              className="mission-image-container"
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-               <img src={me4} alt="Me" className="badge-image" />
-             
-               
-              
-            </motion.div>
-          </div>
-        </motion.section>
-
-         {/* Hero Statement */}
-        <motion.section 
-          className="mission-hero"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-        >
-          <motion.h1 variants={itemVariants}>
-           I’m open to opportunities across Senior Data / BI roles and projects.
-          </motion.h1>
-         
-        </motion.section>
+       
 
         {/* Our Mission Section */}
         <motion.section 
