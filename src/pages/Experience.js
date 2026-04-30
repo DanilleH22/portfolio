@@ -6,7 +6,7 @@ import Tab from 'react-bootstrap/Tab';
 import styles from "../styles/Experience.module.css";
 import { useState, useEffect } from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { Briefcase, Code, Star } from 'react-bootstrap-icons';;
+import { Briefcase, Code, Star } from 'react-bootstrap-icons';
 
 function Experience() {
 
