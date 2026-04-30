@@ -504,39 +504,135 @@ background: #134e6390;
     padding: 0 1rem;
   }
   
-  .mission-hero {
-    padding: 4rem 0 3rem;
+  /* STORY SECTION - Mobile Fix */
+  .story-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
-
-  .mission-hero h1 {
-  font-size: 40px;
-  margin: 0px 0px 2px 0px
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
   
+  /* Reorder items: Image 1, Content, Image 2 */
+  .story-image-container:first-child {
+    order: 1;
+  }
+  
+  .story-content {
+    order: 2;
+  }
+  
+  .mission-image-container {
+    order: 3;
+  }
+  
+  /* Image containers */
+  .story-image-container,
+  .mission-image-container {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    aspect-ratio: 4/5;
+  }
+  
+  /* Fix image positioning */
+  .badge-image {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+  
+  .story-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #011117;
+  }
+  
+  /* Badge styling */
+  .image-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    justify-content: center;
+  }
+  
+  /* Header sizes */
+  .mission-hero {
+    padding: 4rem 0 2rem;
+  }
+  
+  .mission-hero h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Section spacing */
   .story-section,
   .mission-section,
   .values-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   
+  /* Text sizes */
+  .story-tagline {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  .story-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .section-eyebrow {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  /* Stats grid */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   
+  /* Mission points */
+  .mission-point {
+    padding: 1rem;
+  }
+  
+  .point-header {
+    flex-wrap: wrap;
+  }
+  
+  .point-title {
+    font-size: 1.1rem;
+  }
+  
+  .point-description {
+    font-size: 0.85rem;
+    margin-left: 0;
+  }
+  
+  /* Values grid */
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
+  /* CTA buttons */
   .cta-buttons {
     flex-direction: column;
     align-items: center;
@@ -545,12 +641,51 @@ background: #134e6390;
   .cta-primary,
   .cta-secondary {
     width: 100%;
-    max-width: 300px;
-    align-items: center;
-    justify-content: center;
+    max-width: 280px;
+  }
+  
+  /* Contact CTA */
+  .contact-cta {
+    padding: 2rem 1rem;
+    margin: 3rem 0;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-description {
+    font-size: 0.9rem;
   }
 }
 
+/* Extra small devices */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-image-container,
+  .mission-image-container {
+    max-width: 240px;
+  }
+  
+  .section-eyebrow {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .image-badge {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.6rem;
+  }
+}
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: 1fr;
