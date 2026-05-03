@@ -233,61 +233,65 @@ function Experience() {
                 )}
 
                 {/* Mobile Screens */}
-                {isMobile && (
-                  <Col xs={12} className={styles.TabContainer}>
-                    <Nav variant="tabs" className="flex-column">
-                      {data.map((item, index) => (
-                        <Nav.Item
-                          key={index}
-                          className={`${styles.JobName} ${activeIndex === index ? styles.active : ''} ${item.isFreelance ? styles.freelanceJob : ''}`}
-                          onClick={() => setActiveIndex(index)}
-                        >
-                          <Nav.Link eventKey={index.toString()}>
-                            {item.isFreelance && <Briefcase />} {item.job}
-                          </Nav.Link>
-                        </Nav.Item>
-                      ))}
-                    </Nav>
-                    <Tab.Content style={{ width: '100%' }}>
-                      {data.map((item, index) => (
-                        <Tab.Pane eventKey={index.toString()} key={index}>
-                          <div className={styles.roleHeader}>
-                            <h5><strong>{item.role}</strong></h5>
-                            {item.isFreelance && (
-                              <a href={item.projectLink} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                                View Project →
-                              </a>
-                            )}
-                          </div>
-                          <p>{item.date}</p>
-                          
-                          {item.technologies && (
-                            <div className={styles.techStack}>
-                              <strong>Tech Stack:</strong>
-                              <div className={styles.techTags}>
-                                {item.technologies.map((tech, i) => (
-                                  <span key={i} className={styles.techTag}>{tech}</span>
-                                ))}
-                              </div>
-                            </div>
-                          )}
+                {/* Mobile Screens - CUSTOM BUTTONS (No Bootstrap Nav) */}
+{isMobile && (
+  <Col xs={12} className={styles.TabContainer}>
+    {/* Custom tab buttons - not using Bootstrap Nav */}
+    <div className={styles.customTabButtons}>
+      {data.map((item, index) => (
+        <button
+          key={index}
+          className={`${styles.customTabBtn} ${activeIndex === index ? styles.active : ''} ${item.isFreelance ? styles.freelanceJob : ''}`}
+          onClick={() => setActiveIndex(index)}
+        >
+          {item.isFreelance && <Briefcase className={styles.navIcon} />}
+          {item.job}
+          {item.isFreelance && <span className={styles.freelanceBadge}>Freelance</span>}
+        </button>
+      ))}
+    </div>
+    
+    <Tab.Content style={{ width: '100%' }}>
+      {data.map((item, index) => (
+        <Tab.Pane eventKey={index.toString()} key={index}>
+          <div className={styles.roleHeader}>
+            <h5><strong>{item.role}</strong></h5>
+            {item.isFreelance && (
+              <a href={item.projectLink} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                View Project →
+              </a>
+            )}
+          </div>
+          <p className={styles.date}>{item.date}</p>
+          
+          {item.technologies && (
+            <div className={styles.techStack}>
+              <strong>Tech Stack:</strong>
+              <div className={styles.techTags}>
+                {item.technologies.map((tech, i) => (
+                  <span key={i} className={styles.techTag}>{tech}</span>
+                ))}
+              </div>
+            </div>
+          )}
 
-                          {item.result && (
-                            <div className={styles.resultHighlight}>
-                              <strong>✨ Result:</strong> {item.result}
-                            </div>
-                          )}
-                          
-                          <ul>
-                            {item.description.map((point, i) => (
-                              <li key={i}>{point}</li>
-                            ))}
-                          </ul>
-                        </Tab.Pane>
-                      ))}
-                    </Tab.Content>
-                  </Col>
-                )}
+          {item.result && (
+            <div className={styles.resultHighlight}>
+              <Star className={styles.resultIcon} />
+              <strong>Key Result:</strong> {item.result}
+            </div>
+          )}
+          
+          <ul style={{ textAlign: 'left' }}>
+            {item.description.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </Tab.Pane>
+      ))}
+    </Tab.Content>
+  </Col>
+)}
               </Row>
             </Col>
           </div>
