@@ -1,4 +1,3 @@
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import styles from '../styles/Technologies.module.css';
 import Row from 'react-bootstrap/Row';

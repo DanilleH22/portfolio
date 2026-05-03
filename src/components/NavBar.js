@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { Briefcase, Laptop, Code, Envelope, FiletypePdf, PersonBadge, Calendar} from 'react-bootstrap-icons';
+import { Briefcase, Laptop, Code, FiletypePdf, PersonBadge, Calendar} from 'react-bootstrap-icons';
 import styles from '../styles/Portfolio.module.css';
 import danilleCv from '../assets/files/danilleCv.pdf';
 

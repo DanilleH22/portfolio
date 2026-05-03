@@ -1,9 +1,9 @@
 // src/components/Packages.jsx
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button, Modal, Form } from 'react-bootstrap';
-import { Check, Star, Rocket, Crown, PaintBucket, 
-            Trophy, Clock, ChartLine, Code, Window, Mobile, Database, MineCart, 
-            Envelope, CalendarAlt, CameraReels } from 'react-bootstrap-icons';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { Check, Star, Rocket,  PaintBucket, 
+            Trophy, Clock, Code, Window, Database,
+            Envelope, CameraReels } from 'react-bootstrap-icons';
 import styles from '../styles/Packages.module.css';
 import styles2 from '../styles/ContactMe.module.css';
 import ScrollAnimation from '../components/ScrollAnimation';

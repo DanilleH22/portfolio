@@ -1,13 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import "../styles/about.css";
-import me1 from '../assets/me1.JPG';
-import me2 from '../assets/me2.JPG';
-import me3 from '../assets/me3.jpeg';
 import me4 from '../assets/me4.jpeg';
-import me5 from '../assets/me5.JPG';
 import me6 from '../assets/me6.jpeg';
-import me7 from '../assets/me7.jpeg';
+
 
 
 
