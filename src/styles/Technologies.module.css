@@ -1,22 +1,11 @@
+/* Technologies.module.css - CLEANED VERSION */
+
 /* Main Tech Box */
 .TechBox {
   margin: 2rem 0;
 }
 
-.SectionTitle {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-}
-
-.IntroText {
-  color: #cfd8e8;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  padding: 0 1rem;
-  background-color: #011117;
-}
-
-/* Category Cards */
+/* Category Cards (if you're still using them) */
 .CategoryCard {
   border-radius: 12px;
   padding: 1.5rem 1rem;
@@ -65,14 +54,32 @@
   background-color: #011117;
 }
 
+/* ===== MAIN SECTION STYLES (ONLY ONE VERSION EACH) ===== */
 .SectionEyebrow {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.SectionTitle {
+  font-size: 3.3rem;
+  font-weight: 800;
   color: #4ecdc4;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.SectionSubtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  background: transparent;
 }
 
 /* Values Section */
@@ -121,77 +128,6 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.7);
   background: transparent;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .Container {
-    width: 95%;
-  }
-  
-  .TechnologiesCol {
-    margin-bottom: 1rem;
-  }
-  
-  .CategoryCard {
-    padding: 1rem;
-  }
-  
-  /* NEW: Stack cards on mobile */
-  .ValuesGrid {
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1.5rem;
-  }
-  
-  .ValueCard {
-    padding: 2rem 1.5rem;
-  }
-  
-  .SectionEyebrow {
-    font-size: 2rem; /* Smaller on mobile */
-    letter-spacing: 0.1em;
-  }
-  
-  .ValuesSection {
-    padding: 3rem 0; /* Reduced padding on mobile */
-  }
-}
-
-/* Optional: Medium screens (tablets) */
-@media (max-width: 992px) and (min-width: 769px) {
-  .ValuesGrid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  }
-}
-
-
-/* Add these to your existing Technologies.module.css */
-
-.SectionEyebrow {
-  display: inline-block;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
-}
-
-.SectionTitle {
-  font-size: 3.3rem;
-  font-weight: 800;
-  color: #4ecdc4;
-  margin-bottom: 1rem;
-}
-
-.SectionSubtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  background : transparent
 }
 
 /* Skill level styling */
@@ -252,7 +188,8 @@
 }
 
 /* Skill badges */
-.expertBadge, .advancedBadge {
+.expertBadge,
+.advancedBadge {
   display: inline-block;
   font-size: 0.7rem;
   padding: 2px 8px;
@@ -291,7 +228,6 @@
 .guaranteeSection {
   margin-top: 3rem;
   padding: 0 1rem;
-  
 }
 
 .guaranteeBox {
@@ -312,7 +248,6 @@
 }
 
 .guaranteeBox div {
- 
   background: transparent;
 }
 
@@ -320,7 +255,7 @@
   color: white;
   margin-bottom: 5px;
   font-size: 1.1rem;
- background: transparent;
+  background: transparent;
 }
 
 .guaranteeBox p {
@@ -336,22 +271,169 @@
   background: transparent;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE FIXES ===== */
+
+/* Tablet screens (between 769px and 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+  .ValuesGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+  
   .SectionTitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .ValueCard {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile screens (under 768px) */
+@media (max-width: 768px) {
+  .Container {
+    width: 95%;
+    padding: 0 1rem;
+  }
+  
+  .ValuesSection {
+    padding: 2rem 0;
+  }
+  
+  /* FORCE SINGLE COLUMN ON MOBILE */
+  .ValuesGrid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .ValueCard {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  
+  /* Smaller text on mobile */
+  .SectionEyebrow {
+    font-size: 1rem !important;
+    letter-spacing: 1px;
+  }
+  
+  .SectionTitle {
+    font-size: 1.5rem !important;
   }
   
   .SectionSubtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+  
+  .ValueIcon {
+    font-size: 2.5rem;
+  }
+  
+  .ValueTitle {
+    font-size: 1.2rem;
+  }
+  
+  .ValueDescription {
+    font-size: 0.85rem;
+  }
+  
+  /* Fix featured badge on mobile */
+  .featuredCard {
+    position: relative;
+    overflow: visible;
+  }
+  
+  .featuredBadge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+  
+  /* Fix guarantee box on mobile */
+  .guaranteeSection {
+    margin-top: 2rem;
+    padding: 0;
   }
   
   .guaranteeBox {
     flex-direction: column;
     text-align: center;
+    padding: 1.25rem;
   }
   
   .guaranteeIcon {
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
+  }
+  
+  .guaranteeBox h4 {
+    font-size: 1rem;
+  }
+  
+  .guaranteeBox p {
+    font-size: 0.85rem;
+  }
+  
+  .guaranteeBox small {
+    font-size: 0.75rem;
+  }
+  
+  /* Fix service list on mobile */
+  .serviceList {
+    padding-left: 1rem;
+  }
+  
+  .serviceList li {
+    font-size: 0.7rem;
+  }
+  
+  /* Fix skill indicators */
+  .skillLevel {
+    margin: 10px 0;
+  }
+  
+  .levelText {
+    font-size: 0.65rem;
+  }
+  
+  .whatCanBuild {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra small devices (phones under 480px) */
+@media (max-width: 480px) {
+  .ValuesGrid {
+    gap: 1rem;
+  }
+  
+  .ValueCard {
+    padding: 1.25rem;
+  }
+  
+  .SectionEyebrow {
+    font-size: 0.9rem !important;
+  }
+  
+  .SectionTitle {
+    font-size: 1.3rem !important;
+  }
+  
+  .ValueIcon {
+    font-size: 2rem;
+  }
+  
+  .ValueTitle {
+    font-size: 1rem;
+  }
+  
+  .featuredBadge {
+    font-size: 0.5rem;
+    padding: 2px 6px;
+    top: -8px;
+    right: 8px;
   }
 }
