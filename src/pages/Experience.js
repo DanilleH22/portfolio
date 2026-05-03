@@ -16,11 +16,11 @@ function Experience() {
       job: "The SkinTech",
       role: "Front End Developer (Freelance)",
       description: [
-        "Built a custom portfolio website to showcase client's photography and videography work",
-        "Implemented responsive design for optimal viewing across all devices",
-        "Optimized images and assets to reduce page load time by 60%",
-        "Integrated contact forms and gallery features for client inquiries",
-        "Delivered project within 2-week timeline with 100% client satisfaction"
+        "Built a mobile-friendly skincare website showcasing services, products, and before/after photos",
+        "Streamlined navigation to make appointment booking and product discovery faster",
+        "Improved load speed and local SEO (e.g., “facialist near me”) to boost visibility",
+        "Added an online booking system and contact forms to simplify client scheduling",
+        "Strengthened brand consistency with a calming, professional color palette and typography"
       ],
       date: "2026",
       projectLink: "https://skintech-website.webflow.io/",
@@ -48,7 +48,7 @@ function Experience() {
       job: "Solayulm",
       role: "Full Stack Developer (Freelance)",
       description: [
-        "Developed a sustainability-focused blog platform to scale from 100 to 10,000 monthly visitors",
+        "Developed a mindful web-based platform to scale from 100 to 10,000 monthly visitors",
         "Implemented SEO best practices improving search ranking by 85%",
         "Created responsive layouts and optimized performance across devices",
         "Built custom React components for dynamic content display",
