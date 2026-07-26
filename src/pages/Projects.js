@@ -10,6 +10,7 @@ import Proj5 from '../assets/project5.png';
 import Proj6 from '../assets/project6.png';
 import Proj7 from '../assets/project7.png';
 import Proj8 from '../assets/project8.png';
+import Proj9 from '../assets/project9.png';
 import styles from '../styles/Projects.module.css';
 import { Container } from 'react-bootstrap';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -45,7 +46,7 @@ const Projects = () => {
       clientProblem: 'Creative professional needed a modern portfolio to showcase their work and attract more clients',
       timeline: '2 weeks',
       results: 'Increased client inquiries by 40%, reduced page load time by 60%',
-      projectValue: '£350',
+      projectValue: '£400',
       links: [
         { label: 'GitHub', url: 'https://github.com/DanilleH22/LA4K' },
         { label: 'Live Demo', url: 'https://la4k.co.uk' },
@@ -82,6 +83,22 @@ const Projects = () => {
       projectValue: '£300',
       links: [
         { label: 'Live Demo', url: 'https://skintech-website.webflow.io/' },
+      ],
+    },
+    {
+      name: 'Westridge Solutions',
+      image: Proj9,
+      description: 'Created a profeesional website to show biomass grading and help find clients ',
+      technologies: 'HTML, Javascript, React, CSS, GSAP',
+      role: 'Full Stack Developer',
+      isClientWork: true,
+      clientName: 'Westridge Solutions',
+      clientProblem: 'Client needed ',
+      timeline: '3 weeks',
+      results: 'SEO improved by 85%, increase your market visibility and optimize client acquisition.',
+      projectValue: '£400',
+      links: [
+        { label: 'Live Demo', url: 'https://westridgesolutions.co.uk/' },
       ],
     },
   ];
